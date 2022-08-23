@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    oauth-cli (0.1.0)
+    oauth-cli (1.0.0)
       version_gem (~> 1.1)
 
 GEM
