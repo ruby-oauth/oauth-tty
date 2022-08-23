@@ -4,15 +4,15 @@ require_relative "lib/oauth/cli/version"
 
 Gem::Specification.new do |spec|
   spec.name = "oauth-cli"
-  spec.version = Oauth::Cli::VERSION
-  spec.authors = ["Peter Boling"]
+  spec.version = OAuth::CLI::VERSION
+  spec.authors = ["James Pinto", "Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
   spec.summary = "TODO: Write a short summary, because RubyGems requires one."
   spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 

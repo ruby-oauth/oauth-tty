@@ -2,8 +2,8 @@
 
 require_relative "cli/version"
 
-module Oauth
-  module Cli
+module OAuth
+  module CLI
     class Error < StandardError; end
     # Your code goes here...
   end
