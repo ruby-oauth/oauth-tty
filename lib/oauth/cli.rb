@@ -17,6 +17,7 @@ require_relative "cli/sign_command"
 require_relative "cli/version_command"
 
 module OAuth
+  # TODO: The library namespace should be a module, not a class.
   class CLI
     def self.puts_red(string)
       puts "\033[0;91m#{string}\033[0m"

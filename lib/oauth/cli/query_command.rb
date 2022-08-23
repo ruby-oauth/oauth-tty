@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require "oauth"
+require "oauth/helper"
+
 module OAuth
   class CLI
     class QueryCommand < BaseCommand

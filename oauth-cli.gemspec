@@ -6,36 +6,48 @@ Gem::Specification.new do |spec|
   spec.add_dependency("version_gem", "~> 1.1")
 
   spec.name = "oauth-cli"
-  spec.version = OAuth::CLI::VERSION
+  spec.version = OAuth::CLI::Version::VERSION
   spec.authors = ["James Pinto", "Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "OAuth 1.0 Command Line Interface"
+  spec.description = "OAuth 1.0 Command Line Interface"
+  spec.homepage = "https://gitlab.com/pboling/oauth-cli"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "#{spec.homepage}/-/tree/v#{spec.version}"
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/-/blob/v#{spec.version}/CHANGELOG.md"
+  spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/-/issues"
+  spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
+  spec.metadata["wiki_uri"] = "#{spec.homepage}/-/wikis/home"
+  spec.metadata["rubygems_mfa_required"] = "true"
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(__dir__) do
-    `git ls-files -z`.split("\x0").reject do |f|
-      (f == __FILE__) || f.match(%r{\A(?:(?:bin|test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
-    end
-  end
+  spec.files = Dir.glob("lib/**/*.rb") + ["LICENSE.txt", "README.md", "CHANGELOG.md", "CODE_OF_CONDUCT.md",
+                                          "SECURITY.md", "CONTRIBUTING.md"]
+
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_development_dependency("em-http-request", "~> 1.1.7")
+  spec.add_development_dependency("iconv")
+  spec.add_development_dependency("minitest", "~> 5.15.0")
+  spec.add_development_dependency("mocha")
+  spec.add_development_dependency("rack", "~> 2.0")
+  spec.add_development_dependency("rack-test")
+  spec.add_development_dependency("rake", "~> 13.0")
+  spec.add_development_dependency("rest-client")
+  spec.add_development_dependency("rubocop-lts", "~> 18.0")
+  spec.add_development_dependency("typhoeus", ">= 0.1.13")
+  spec.add_development_dependency("webmock", "<= 3.19.0")
 
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  # NOTE: This would normally be a runtime dependency,
+  #       but the initial release aims for complete backwards compatibility with oauth v1.0,
+  #       where the cli was optional,
+  #       and required the caller to have already installed undeclared dependencies such as this.
+  #       When oauth v1.1 is released this will move to a runtime dependency,
+  #       and oauth will no longer depend directly on this gem.
+  spec.add_development_dependency("actionpack", ["<= 8", ">= 6"])
 end

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "oauth/request_proxy"
+
 module OAuth
   class CLI
     class SignCommand < BaseCommand
