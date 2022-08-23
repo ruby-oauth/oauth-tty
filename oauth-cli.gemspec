@@ -49,5 +49,5 @@ Gem::Specification.new do |spec|
   #       and required the caller to have already installed undeclared dependencies such as this.
   #       When oauth v1.1 is released this will move to a runtime dependency,
   #       and oauth will no longer depend directly on this gem.
-  spec.add_development_dependency("actionpack", ["<= 8", ">= 6"])
+  spec.add_development_dependency("actionpack", [">= 6", "<= 8"])
 end
