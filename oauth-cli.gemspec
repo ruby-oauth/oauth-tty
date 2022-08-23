@@ -3,6 +3,8 @@
 require_relative "lib/oauth/cli/version"
 
 Gem::Specification.new do |spec|
+  spec.add_dependency("version_gem", "~> 1.1")
+
   spec.name = "oauth-cli"
   spec.version = OAuth::CLI::VERSION
   spec.authors = ["James Pinto", "Peter Boling"]
