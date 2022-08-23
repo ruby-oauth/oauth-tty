@@ -81,6 +81,8 @@ GEM
     netrc (0.11.0)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
+      racc (~> 1.4)
     oauth (1.0.0)
       version_gem (~> 1.1)
     overcommit (0.59.1)
@@ -180,6 +182,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   actionpack (>= 6, <= 8)
