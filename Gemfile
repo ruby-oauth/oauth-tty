@@ -41,3 +41,14 @@ group :documentation do
   gem "redcarpet", platform: :mri
   gem "yard", require: false
 end
+
+# Test gems
+group :test do
+  gem "mocha"
+end
+
+# Gitlab won't have "development" gems as defined in the gemspec when running CI,
+# unless they are made to load here in the Gemfile.
+group :ci do
+  gem "rubocop-lts", "~> 18.0"
+end
