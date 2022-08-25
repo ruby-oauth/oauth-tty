@@ -10,6 +10,8 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Curb has trouble building native extentions on Windows platform
 curb = !Gem.win_platform?
 
+ruby "3.1.2"
+
 gem "oauth"
 gem "actionpack", [">= 6", "<= 8"]
 
