@@ -12,8 +12,8 @@ curb = !Gem.win_platform?
 
 ruby "3.1.2"
 
-gem "oauth"
 gem "actionpack", [">= 6", "<= 8"]
+gem "oauth"
 
 gem "pry", platforms: %i[mri]
 platforms :mri do
@@ -46,8 +46,8 @@ end
 
 # Test gems
 group :test do
-  gem "mocha"
   gem "minitest", "~> 5.15.0"
+  gem "mocha"
   gem "rack", "~> 2.0"
   gem "rack-test"
   gem "rest-client"

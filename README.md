@@ -2,6 +2,9 @@
 
 A Command Line Interface for interacting with OAuth 1.0 services.
 
+This library was written originally by [Thiago Pinto](https://github.com/thiagopintodev) in 2016 and bundled with the oauth gem.
+It was extracted into a separate library by [Peter Boling](https://railsbling.com) in 2022 as part of the move to a stable version 1.0 for the oauth gem.
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
