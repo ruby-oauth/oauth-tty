@@ -45,10 +45,19 @@ end
 # Test gems
 group :test do
   gem "mocha"
+  gem "minitest", "~> 5.15.0"
+  gem "rack", "~> 2.0"
+  gem "rack-test"
+  gem "rest-client"
+  gem "typhoeus", ">= 0.1.13"
+  gem "webmock", "<= 3.19.0"
 end
 
 # Gitlab won't have "development" gems as defined in the gemspec when running CI,
 # unless they are made to load here in the Gemfile.
 group :ci do
+  gem "em-http-request", "~> 1.1.7"
+  gem "iconv"
+  gem "rake", "~> 13.0"
   gem "rubocop-lts", "~> 18.0"
 end
