@@ -11,12 +11,12 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 curb = !Gem.win_platform?
 
 gem "oauth"
+gem "actionpack", [">= 6", "<= 8"]
 
 gem "pry", platforms: %i[mri]
 platforms :mri do
   gem "codecov", "~> 0.6" # For CodeCov
   gem "overcommit", "~> 0.58"
-  gem "rubocop-faker"
   gem "rubocop-md"
   gem "rubocop-minitest"
   gem "rubocop-packaging"

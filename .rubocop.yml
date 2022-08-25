@@ -3,6 +3,17 @@ inherit_from: .rubocop_todo.yml
 inherit_gem:
   rubocop-lts: rubocop-lts.yml
 
+require:
+  - 'rubocop-md'
+  - 'rubocop-minitest'
+  - 'rubocop-packaging'
+  - 'rubocop-performance'
+  - 'rubocop-rake'
+  - 'rubocop-thread_safety'
+
+AllCops:
+  DisplayCopNames: true # Display the name of the failing cops
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
