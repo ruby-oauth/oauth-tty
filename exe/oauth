@@ -12,4 +12,4 @@ end
 ARGV << "help" if ARGV.empty?
 command = ARGV.shift
 
-OAuth::CLI.new($stdout, $stdin, $stderr, command, ARGV).run
+OAuth::TTY::CLI.new($stdout, $stdin, $stderr, command, ARGV).run

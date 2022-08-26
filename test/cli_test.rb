@@ -261,14 +261,14 @@ class CliTest < Minitest::Test
   def run_command(arguments = [])
     s = StringIO.new
     command = arguments.shift
-    OAuth::CLI.new(s, StringIO.new, StringIO.new, command, arguments).run
+    OAuth::TTY::CLI.new(s, StringIO.new, StringIO.new, command, arguments).run
 
     s.rewind
     s.read
   end
 
   def parse(command)
-    cli = OAuth::CLI.new(StringIO.new, StringIO.new, StringIO.new, command, [])
+    cli = OAuth::TTY::CLI.new(StringIO.new, StringIO.new, StringIO.new, command, [])
     cli.send(:parse_command, command)
   end
 

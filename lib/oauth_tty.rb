@@ -5,7 +5,7 @@ require "oauth/tty"
 
 # A gem was released in 2011 which was a rudimentary commands for the oauth gem,
 #   thus it occupies the name in RubyGems.org.
-# This library was originally written as part of the oauth gem, in 2016, as OAuth::CLI.
+# This library was originally written as part of the oauth gem, in 2016, as OAuth::TTY.
 # This gem is named oauth-tty, but intends to have backwards compatibility with oauth gem v1.0.x.
 # Now that it is being extracted there is a name conflict.
 #
