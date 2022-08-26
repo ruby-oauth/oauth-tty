@@ -13,9 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-## [1.0.0] - 2022-08-23
+## [1.0.1] - 2022-08-26
+### Fixed
+- Circular reference while loading
+
+## [1.0.0] - 2022-08-26
 ### Added
 - Initial release
 
-[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.0...main
+[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.1...main
+[1.0.1]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.1
 [1.0.0]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.0
