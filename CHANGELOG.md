@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [1.0.2] - 2022-08-26
+### Fixed
+- URLs in Gemspec
+
 ## [1.0.1] - 2022-08-26
 ### Fixed
 - Circular reference while loading
@@ -21,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.1...main
+[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.2...main
+[1.0.2]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.2
 [1.0.1]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.1
 [1.0.0]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.0
