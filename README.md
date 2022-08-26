@@ -1,6 +1,6 @@
 # OAuth::TTY
 
-A Command Line Interface for interacting with OAuth 1.0 services.
+A TTY Command Line Interface for interacting with OAuth 1.0 services.
 
 This library was written originally by [Thiago Pinto](https://github.com/thiagopintodev) in 2016 and bundled with the oauth gem.
 It was extracted into a separate library by [Peter Boling](https://railsbling.com) in 2022 as part of the move to a stable version 1.0 for the oauth gem.
@@ -9,11 +9,11 @@ It was extracted into a separate library by [Peter Boling](https://railsbling.co
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add oauth-cli
+    $ bundle add oauth-tty
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install oauth-cli
+    $ gem install oauth-tty
 
 ## Usage
 
@@ -27,7 +27,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://gitlab.com/pboling/oauth-cli/-/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://gitlab.com/pboling/oauth-cli/-/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://gitlab.com/oauth-xx/oauth-tty/-/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://gitlab.com/oauth-xx/oauth-tty/-/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -35,4 +35,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the OAuth::CLI project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://gitlab.com/pboling/oauth-cli/-/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the OAuth::CLI project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://gitlab.com/oauth-xx/oauth-tty/-/blob/main/CODE_OF_CONDUCT.md).

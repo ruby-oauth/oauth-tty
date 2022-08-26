@@ -17,5 +17,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://gitlab.com/pboling/oauth-cli/-/compare/v1.0.0...main
-[1.0.0]: https://gitlab.com/pboling/oauth-cli/-/releases/tag/v1.0.0
+[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.0...main
+[1.0.0]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.0

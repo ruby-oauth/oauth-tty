@@ -1,6 +1,6 @@
 ## Contributing
 
-Bug reports and pull requests are welcome on GitLab at [https://gitlab.com/pboling/oauth-cli/][source]. This project is
+Bug reports and pull requests are welcome on GitLab at [https://gitlab.com/oauth-xx/oauth-tty/][source]. This project is
 intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to
 the [code of conduct][conduct].
 
@@ -16,8 +16,8 @@ Made with [contributors-img][contrib-rocks].
 
 [comment]: <> (Following links are used by README, CONTRIBUTING, Homepage)
 
-[conduct]: https://gitlab.com/pboling/oauth-cli/-/blob/main/CODE_OF_CONDUCT.md
-[contributors]: https://gitlab.com/pboling/oauth-cli/-/graphs/main
+[conduct]: https://gitlab.com/oauth-xx/oauth-tty/-/blob/main/CODE_OF_CONDUCT.md
+[contributors]: https://gitlab.com/oauth-xx/oauth-tty/-/graphs/main
 [mailinglist]: http://groups.google.com/group/oauth-ruby
-[source]: https://gitlab.com/pboling/oauth-cli/-/tree/main
+[source]: https://gitlab.com/oauth-xx/oauth-tty/-/tree/main
 [contrib-rocks]: https://contrib.rocks
