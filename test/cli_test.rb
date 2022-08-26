@@ -2,8 +2,6 @@
 
 require_relative "test_helper"
 
-require "oauth/cli"
-
 class CliTest < Minitest::Test
   def test_parse_dashed
     assert_equal "version", parse("-v")
@@ -68,8 +66,11 @@ class CliTest < Minitest::Test
 
   def test_version
     out = run_command(%w[version])
-
-    assert_equal "OAuth Gem #{OAuth::Version::VERSION}\n", out
+    message = <<-MESS
+    OAuth Gem #{OAuth::Version::VERSION}
+    OAuth TTY Gem #{OAuth::TTY::Version::VERSION}
+    MESS
+    assert_equal message, out
   end
 
   def test_query_empty

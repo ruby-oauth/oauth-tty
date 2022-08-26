@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module OAuth
-  class CLI
-    class BaseCommand
+  module TTY
+    class Command
       def initialize(stdout, stdin, stderr, arguments)
         @stdout = stdout
         @stdin = stdin
@@ -32,7 +32,7 @@ module OAuth
 
       def show_missing(array)
         array = array.map { |s| "--#{s}" }.join(" ")
-        OAuth::CLI.puts_red "Options missing to OAuth CLI: #{array}"
+        OAuth::TTY::CLI.puts_red "Options missing to OAuth CLI: #{array}"
       end
 
       def xmpp?

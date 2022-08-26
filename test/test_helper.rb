@@ -10,6 +10,9 @@ require "mocha/minitest"
 require "rack/test"
 require "webmock/minitest"
 
+# This library is an extension of the oauth gem
+require "oauth"
+
 DEBUG = ENV["DEBUG"] == "true"
 
 ruby_version = Gem::Version.new(RUBY_VERSION)
@@ -52,7 +55,7 @@ if RUN_COVERAGE
 end
 
 # This gem
-require "oauth-cli"
+require "oauth_tty"
 
 # Run the tests!
 require "minitest/autorun"

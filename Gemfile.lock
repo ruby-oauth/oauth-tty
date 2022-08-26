@@ -1,44 +1,23 @@
 PATH
   remote: .
   specs:
-    oauth-cli (1.0.0)
+    oauth-tty (1.0.0)
       version_gem (~> 1.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (7.0.3.1)
-      actionview (= 7.0.3.1)
-      activesupport (= 7.0.3.1)
-      rack (~> 2.0, >= 2.2.0)
-      rack-test (>= 0.6.3)
-      rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.2.0)
-    actionview (7.0.3.1)
-      activesupport (= 7.0.3.1)
-      builder (~> 3.1)
-      erubi (~> 1.4)
-      rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    activesupport (7.0.3.1)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 1.6, < 2)
-      minitest (>= 5.1)
-      tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
-    builder (3.2.4)
     byebug (11.1.3)
     childprocess (4.1.0)
     codecov (0.6.0)
       simplecov (>= 0.15, < 0.22)
     coderay (1.1.3)
-    concurrent-ruby (1.1.10)
     cookiejar (0.3.3)
     crack (0.4.5)
       rexml
-    crass (1.0.6)
     curb (1.0.1)
     docile (1.4.0)
     domain_name (0.5.20190701)
@@ -51,7 +30,6 @@ GEM
       http_parser.rb (>= 0.6.0)
     em-socksify (0.3.2)
       eventmachine (>= 1.0.0.beta.4)
-    erubi (1.11.0)
     ethon (0.15.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
@@ -62,14 +40,9 @@ GEM
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http_parser.rb (0.8.0)
-    i18n (1.12.0)
-      concurrent-ruby (~> 1.0)
     iconv (1.0.8)
     iniparse (1.5.0)
     json (2.6.2)
-    loofah (2.18.0)
-      crass (~> 1.0.2)
-      nokogiri (>= 1.5.9)
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -77,10 +50,6 @@ GEM
     minitest (5.15.0)
     mocha (1.14.0)
     netrc (0.11.0)
-    nokogiri (1.13.8-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-linux)
-      racc (~> 1.4)
     oauth (1.0.0)
       version_gem (~> 1.1)
     overcommit (0.59.1)
@@ -97,15 +66,9 @@ GEM
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
     public_suffix (5.0.0)
-    racc (1.6.0)
     rack (2.2.4)
     rack-test (2.0.2)
       rack (>= 1.3)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
-      nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.3)
-      loofah (~> 2.3)
     rainbow (3.1.1)
     rake (13.0.6)
     redcarpet (3.5.1)
@@ -160,8 +123,6 @@ GEM
     simplecov_json_formatter (0.1.4)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (2.0.5)
-      concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
@@ -180,7 +141,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  actionpack (>= 6, <= 8)
   byebug
   codecov (~> 0.6)
   curb (>= 0.7.16, < 1.1, != 0.8.7)
@@ -189,8 +149,8 @@ DEPENDENCIES
   iconv
   minitest (~> 5.15.0)
   mocha
-  oauth
-  oauth-cli!
+  oauth (>= 1)
+  oauth-tty!
   overcommit (~> 0.58)
   pry
   pry-byebug

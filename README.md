@@ -1,4 +1,4 @@
-# OAuth::CLI
+# OAuth::TTY
 
 A Command Line Interface for interacting with OAuth 1.0 services.
 
