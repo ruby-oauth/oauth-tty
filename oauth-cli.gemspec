@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
 
   spec.name = "oauth-tty"
   spec.version = OAuth::TTY::Version::VERSION
-  spec.authors = ["James Pinto", "Peter Boling"]
+  spec.authors = ["Thiago Pinto", "Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
   spec.summary = "OAuth 1.0 TTY CLI"
