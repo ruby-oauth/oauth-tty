@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency("version_gem", "~> 1.1")
 
   spec.cert_chain = ["certs/pboling.pem"]
-  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
+  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
 
   spec.name = "oauth-tty"
   spec.version = OAuth::TTY::Version::VERSION
@@ -29,8 +29,16 @@ Gem::Specification.new do |spec|
   spec.metadata["mailing_list_uri"] = "https://groups.google.com/g/oauth-ruby"
   spec.metadata["rubygems_mfa_required"] = "true"
 
-  spec.files = Dir.glob("lib/**/*.rb") + ["LICENSE.txt", "README.md", "CHANGELOG.md", "CODE_OF_CONDUCT.md",
-                                          "SECURITY.md", "CONTRIBUTING.md", "exe/oauth"]
+  spec.files = Dir[
+    "lib/**/*",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "exe/oauth",
+    "LICENSE.txt",
+    "README.md",
+    "SECURITY.md",
+  ]
 
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
