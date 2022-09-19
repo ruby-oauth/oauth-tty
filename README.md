@@ -15,9 +15,18 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ gem install oauth-tty
 
+NOTE: You might see a warning like:
+```
+oauth-tty's executable "oauth" conflicts with oauth
+Overwrite the executable? [yN]  y
+```
+The `oauth` executable from this gem *is* the extracted and repackaged executable from the `oauth` gem, so you *should* overwrite it.
+
 ## Usage
 
-For now, please see the tests.
+In a shell run `oauth` to start the console.
+
+For now, please see the tests for other usage.
 
 ## Development
 
