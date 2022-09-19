@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/-/issues"
   spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
   spec.metadata["wiki_uri"] = "#{spec.homepage}/-/wikis/home"
+  spec.metadata["funding_uri"] = "https://liberapay.com/pboling"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.files = Dir.glob("lib/**/*.rb") + ["LICENSE.txt", "README.md", "CHANGELOG.md", "CODE_OF_CONDUCT.md",
