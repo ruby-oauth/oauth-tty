@@ -3,7 +3,7 @@
 require_relative "lib/oauth/tty/version"
 
 Gem::Specification.new do |spec|
-  spec.add_dependency("version_gem", "~> 1.1")
+  spec.add_dependency("version_gem", ["~> 1.1", ">= 1.1.1"])
 
   spec.cert_chain = ["certs/pboling.pem"]
   spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
