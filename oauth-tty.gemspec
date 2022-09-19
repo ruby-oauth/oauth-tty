@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.name = "oauth-tty"
   spec.version = OAuth::TTY::Version::VERSION
   spec.authors = ["Thiago Pinto", "Peter Boling"]
-  spec.email = ["peter.boling@gmail.com"]
+  spec.email = ["peter.boling@gmail.com", "oauth-ruby@googlegroups.com"]
 
   spec.summary = "OAuth 1.0 TTY CLI"
   spec.description = "OAuth 1.0 TTY Command Line Interface"
@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.metadata["documentation_uri"] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
   spec.metadata["wiki_uri"] = "#{spec.homepage}/-/wikis/home"
   spec.metadata["funding_uri"] = "https://liberapay.com/pboling"
+  spec.metadata["mailing_list_uri"] = "https://groups.google.com/g/oauth-ruby"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.files = Dir.glob("lib/**/*.rb") + ["LICENSE.txt", "README.md", "CHANGELOG.md", "CODE_OF_CONDUCT.md",
