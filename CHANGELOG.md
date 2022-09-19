@@ -34,7 +34,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.2...main
-[1.0.2]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.2
-[1.0.1]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.1
+[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.4...main
+[1.0.4]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.3...v1.0.4
+[1.0.4t]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.4
+[1.0.3]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.2...v1.0.3
+[1.0.3t]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.3
+[1.0.2]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.1...v1.0.2
+[1.0.2t]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.2
+[1.0.1]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.0...v1.0.1
+[1.0.1t]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.1
 [1.0.0]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.0
+[1.0.0t]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.0
