@@ -6,28 +6,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-
 ### Changed
-
 ### Fixed
-
 ### Removed
+
+## [1.0.4] - 2022-09-19
+### Added
+- Certificate for signing gem releases (@pboling)
+- Gemspec metadata (@pboling)
+  - funding_uri
+  - mailing_list_uri
+- Installation and usage documentation (@pboling)
 
 ## [1.0.3] - 2022-09-06
 ### Fixed
-- Author name - Thaigo Pinto
+- Author name - Thaigo Pinto (@pboling)
 
 ## [1.0.2] - 2022-08-26
 ### Fixed
-- URLs in Gemspec
+- URLs in Gemspec (@pboling)
 
 ## [1.0.1] - 2022-08-26
 ### Fixed
-- Circular reference while loading
+- Circular reference while loading (@pboling)
 
 ## [1.0.0] - 2022-08-26
 ### Added
-- Initial release
+- Initial release (@pboling)
 
 [Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.2...main
 [1.0.2]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.2
