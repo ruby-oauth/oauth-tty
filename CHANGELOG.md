@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - funding_uri
   - mailing_list_uri
 - Installation and usage documentation (@pboling)
+- Checksums for released gems (@pboling)
+### Changed
+- Gem releases are now cryptographically signed (@pboling)
 
 ## [1.0.3] - 2022-09-06
 ### Fixed
