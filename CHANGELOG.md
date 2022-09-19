@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.0.4] - 2022-09-19
+## [1.0.4] - 2022-09-19 ([tag][1.0.4t])
 ### Added
 - Certificate for signing gem releases (@pboling)
 - Gemspec metadata (@pboling)
@@ -21,19 +21,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Gem releases are now cryptographically signed (@pboling)
 
-## [1.0.3] - 2022-09-06
+## [1.0.3] - 2022-09-06 ([tag][1.0.3t])
 ### Fixed
 - Author name - Thaigo Pinto (@pboling)
 
-## [1.0.2] - 2022-08-26
+## [1.0.2] - 2022-08-26 ([tag][1.0.2t])
 ### Fixed
 - URLs in Gemspec (@pboling)
 
-## [1.0.1] - 2022-08-26
+## [1.0.1] - 2022-08-26 ([tag][1.0.1t])
 ### Fixed
 - Circular reference while loading (@pboling)
 
-## [1.0.0] - 2022-08-26
+## [1.0.0] - 2022-08-26 ([tag][1.0.0t])
 ### Added
 - Initial release (@pboling)
 
