@@ -42,7 +42,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.4...main
+[Unreleased]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.5...main
+[1.0.5]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.4...v1.0.5
+[1.0.5t]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.5
 [1.0.4]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.3...v1.0.4
 [1.0.4t]: https://gitlab.com/oauth-xx/oauth-tty/-/releases/tag/v1.0.4
 [1.0.3]: https://gitlab.com/oauth-xx/oauth-tty/-/compare/v1.0.2...v1.0.3
