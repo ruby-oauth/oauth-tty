@@ -12,7 +12,7 @@ curb = !Gem.win_platform?
 
 ruby "3.1.2"
 
-gem "oauth", ">= 1"
+gem "oauth", ">= 1.1.0"
 
 gem "pry", platforms: %i[mri]
 platforms :mri do

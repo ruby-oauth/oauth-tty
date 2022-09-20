@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     oauth-tty (1.0.4)
-      version_gem (~> 1.1)
+      version_gem (~> 1.1, >= 1.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -36,6 +36,7 @@ GEM
     ffi (1.15.5)
     github-markup (4.0.1)
     hashdiff (1.0.1)
+    hashie (5.0.0)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -50,7 +51,9 @@ GEM
     minitest (5.15.0)
     mocha (1.14.0)
     netrc (0.11.0)
-    oauth (1.0.0)
+    oauth (1.1.0)
+      oauth-tty (~> 1.0, >= 1.0.1)
+      snaky_hash (~> 2.0)
       version_gem (~> 1.1)
     overcommit (0.59.1)
       childprocess (>= 0.6.3, < 5)
@@ -94,11 +97,11 @@ GEM
       rubocop-ruby2_7 (~> 1.0.6)
     rubocop-md (1.0.1)
       rubocop (>= 1.0)
-    rubocop-minitest (0.21.0)
+    rubocop-minitest (0.22.1)
       rubocop (>= 0.90, < 2.0)
     rubocop-packaging (0.5.1)
       rubocop (>= 0.89, < 2.0)
-    rubocop-performance (1.14.3)
+    rubocop-performance (1.15.0)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     rubocop-rake (0.6.0)
@@ -121,13 +124,16 @@ GEM
       simplecov
     simplecov-lcov (0.8.0)
     simplecov_json_formatter (0.1.4)
+    snaky_hash (2.0.0)
+      hashie
+      version_gem (~> 1.1)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
-    unicode-display_width (2.2.0)
-    version_gem (1.1.0)
+    unicode-display_width (2.3.0)
+    version_gem (1.1.1)
     webmock (3.18.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -149,7 +155,7 @@ DEPENDENCIES
   iconv
   minitest (~> 5.15.0)
   mocha
-  oauth (>= 1)
+  oauth (>= 1.1.0)
   oauth-tty!
   overcommit (~> 0.58)
   pry
@@ -178,4 +184,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.21
+   2.3.22
