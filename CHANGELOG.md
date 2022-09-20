@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.5] - 2022-09-20 ([tag][1.0.5t])
 ### Added
 - SHA 256 Checksum for release (in addition to SHA 512) (@pboling)
-- Aligned checksums directory name with `rake build:checksum` task
+- Aligned checksums directory name with `rake build:checksum` task (@pboling)
+- General Cleanup
 
 ## [1.0.4] - 2022-09-19 ([tag][1.0.4t])
 ### Added
