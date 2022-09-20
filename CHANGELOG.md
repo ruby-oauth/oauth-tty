@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.0.5] - 2022-09-20 ([tag][1.0.5t])
+### Added
+- SHA 256 Checksum for release (in addition to SHA 512) (@pboling)
+- Aligned checksums directory name with `rake build:checksum` task
+
 ## [1.0.4] - 2022-09-19 ([tag][1.0.4t])
 ### Added
 - Certificate for signing gem releases (@pboling)
@@ -17,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - funding_uri
   - mailing_list_uri
 - Installation and usage documentation (@pboling)
-- Checksums for released gems (@pboling)
+- SHA 512 Checksum for release (@pboling)
 ### Changed
 - Gem releases are now cryptographically signed (@pboling)
 
