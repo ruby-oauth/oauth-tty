@@ -54,25 +54,11 @@ In a shell run `oauth` to start the console.
 
 For now, please see the tests for other usage.
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`.
-To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at [https://gitlab.com/oauth-xx/oauth-tty/-/issues](https://gitlab.com/oauth-xx/oauth-tty/-/issues). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://gitlab.com/oauth-xx/oauth-tty/-/blob/main/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
 ## Code of Conduct
 
 Everyone interacting in the OAuth::TTY project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://gitlab.com/oauth-xx/oauth-tty/-/blob/main/CODE_OF_CONDUCT.md).
 
+<<<<<<< Updated upstream
 ## 🤑 One more thing
 
 You made it to the bottom of the page,
@@ -86,3 +72,22 @@ or one of the others at the head of this README.
 
 [🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
 [🖇buyme]: https://www.buymeacoffee.com/pboling
+=======
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://gitlab.com/oauth-xx/oauth-tty/-/blob/main/CODE_OF_CONDUCT.md).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitLab at [https://gitlab.com/oauth-xx/oauth-tty/-/issues](https://gitlab.com/oauth-xx/oauth-tty/-/issues).
+
+See [CONTRIBUTING.md][contributing] for detailed instructions on how to help!
+
+## Contributors
+
+See [https://gitlab.com/oauth-xx/oauth/-/graphs/main][🚎contributors]
+
+## License
+
+The gem is available as open source under the terms of
+the [MIT License][license] [![License: MIT][🖇src-license-img]][🖇src-license].
+See [LICENSE.txt][license] for the [Copyright Notice][copyright-notice-explainer].
+>>>>>>> Stashed changes
