@@ -57,7 +57,7 @@ RSpec.describe OAuth::TTY::Command do
         scheme: :header,
         method: :post,
         params: [],
-        version: "1.0"
+        version: "1.0",
       )
       # Non-deterministic values are present but not asserted for exact value
       expect(cmd.send(:options)).to include(:oauth_nonce, :oauth_timestamp)
@@ -80,17 +80,28 @@ RSpec.describe OAuth::TTY::Command do
 
     it "collects sign/query related switches" do
       cmd = build_cmd(%w[
-        --method GET
-        --nonce N
-        --parameters a:1
-        --parameters raw_pair
-        --signature-method PLAINTEXT
-        --token T
-        --secret S
-        --timestamp TS
-        --realm R
-        --uri http://example.com/
-        --version 1.0a
+        --method
+        GET
+        --nonce
+        N
+        --parameters
+        a:1
+        --parameters
+        raw_pair
+        --signature-method
+        PLAINTEXT
+        --token
+        T
+        --secret
+        S
+        --timestamp
+        TS
+        --realm
+        R
+        --uri
+        http://example.com/
+        --version
+        1.0a
       ])
       expect(cmd.send(:options)).to include(
         method: "GET",
@@ -101,7 +112,7 @@ RSpec.describe OAuth::TTY::Command do
         oauth_timestamp: "TS",
         realm: "R",
         uri: "http://example.com/",
-        oauth_version: "1.0a"
+        oauth_version: "1.0a",
       )
       expect(cmd.send(:options)[:params]).to eq(["a:1", "raw_pair"])
     end
@@ -113,18 +124,23 @@ RSpec.describe OAuth::TTY::Command do
 
     it "captures authorization URLs and scope" do
       cmd = build_cmd(%w[
-        --access-token-url https://example.com/access
-        --authorize-url https://example.com/auth
-        --callback-url https://example.com/cb
-        --request-token-url https://example.com/request
-        --scope email
+        --access-token-url
+        https://example.com/access
+        --authorize-url
+        https://example.com/auth
+        --callback-url
+        https://example.com/cb
+        --request-token-url
+        https://example.com/request
+        --scope
+        email
       ])
       expect(cmd.send(:options)).to include(
         access_token_url: "https://example.com/access",
         authorize_url: "https://example.com/auth",
         oauth_callback: "https://example.com/cb",
         request_token_url: "https://example.com/request",
-        scope: "email"
+        scope: "email",
       )
     end
   end
@@ -132,11 +148,16 @@ RSpec.describe OAuth::TTY::Command do
   describe "#parameters" do
     it "builds escaped params and merges oauth keys, dropping nil/empty ones" do
       cmd = build_cmd(%w[
-        --consumer-key CK
-        --token TK
-        --parameters foo:bar
-        --parameters baz:qux
-        --parameters raw=pair
+        --consumer-key
+        CK
+        --token
+        TK
+        --parameters
+        foo:bar
+        --parameters
+        baz:qux
+        --parameters
+        raw=pair
       ])
       params = cmd.send(:parameters)
       # CGI.parse returns arrays of values per key
@@ -147,7 +168,7 @@ RSpec.describe OAuth::TTY::Command do
       expect(params).to include(
         "oauth_consumer_key" => "CK",
         "oauth_token" => "TK",
-        "oauth_signature_method" => "HMAC-SHA1"
+        "oauth_signature_method" => "HMAC-SHA1",
       )
       # timestamp, nonce exist but are not asserted exactly
       expect(params).to include("oauth_timestamp", "oauth_nonce")

@@ -31,7 +31,7 @@ RSpec.describe OAuth::TTY::Commands::AuthorizeCommand do
 
       expect(request_token).to receive(:get_access_token).with({oauth_verifier: "VERIFIER"}).and_return(access_token)
 
-      out_before = stdout.string.dup
+      stdout.string.dup
       build_cmd(%w[--consumer-key CK --consumer-secret CS --method GET --uri https://example.com]).run
 
       stdout.rewind

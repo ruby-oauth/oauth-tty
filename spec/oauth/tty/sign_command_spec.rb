@@ -11,7 +11,8 @@ RSpec.describe OAuth::TTY::Commands::SignCommand do
 
   describe "non-verbose output", :check_output do
     it "prints only the signature" do
-      request = double("Request",
+      request = double(
+        "Request",
         oauth_parameters: {},
         non_oauth_parameters: {},
         oauth_signature: "SIG",
@@ -21,11 +22,16 @@ RSpec.describe OAuth::TTY::Commands::SignCommand do
       expect(request).to receive(:sign!).with(consumer_secret: "CS", token_secret: "TS")
 
       build_cmd(%w[
-        --consumer-key CK
-        --consumer-secret CS
-        --token TK
-        --secret TS
-        --uri https://example.com
+        --consumer-key
+        CK
+        --consumer-secret
+        CS
+        --token
+        TK
+        --secret
+        TS
+        --uri
+        https://example.com
       ]).run
 
       stdout.rewind
@@ -72,11 +78,16 @@ RSpec.describe OAuth::TTY::Commands::SignCommand do
       expect(request).to receive(:sign!).with(consumer_secret: "CS", token_secret: "TS")
 
       build_cmd(%w[
-        --consumer-key CK
-        --consumer-secret CS
-        --token TK
-        --secret TS
-        --uri https://example.com
+        --consumer-key
+        CK
+        --consumer-secret
+        CS
+        --token
+        TK
+        --secret
+        TS
+        --uri
+        https://example.com
         --verbose
         --xmpp
       ]).run
