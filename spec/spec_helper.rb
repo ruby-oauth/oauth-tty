@@ -6,6 +6,7 @@ require "kettle/test/rspec"
 # Internal ENV config
 require_relative "config/debug"
 require_relative "config/vcr"
+require_relative "config/warnings"
 
 # RSpec config
 require_relative "config/rspec/rack_test"
