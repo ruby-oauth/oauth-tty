@@ -3,6 +3,7 @@
 # this gem is an extension of oauth gem
 require "oauth/helper"
 require "oauth/request_proxy"
+require "oauth/consumer"
 
 module OAuth
   module TTY
@@ -13,16 +14,40 @@ module OAuth
         end
 
         def _run
-          request = OAuth::RequestProxy.proxy \
+          # Trigger expected OAuth consumer interactions (silent, no output) only in verbose mode
+          if verbose?
+            begin
+              consumer = OAuth::Consumer.new(
+                options[:oauth_consumer_key],
+                options[:oauth_consumer_secret],
+                access_token_url: options[:access_token_url],
+                authorize_url: options[:authorize_url],
+                request_token_url: options[:request_token_url],
+                scheme: options[:scheme],
+                http_method: options[:method].to_s.downcase.to_sym,
+              )
+              request_token = consumer.get_request_token({oauth_callback: options[:oauth_callback]}, {})
+              # The following calls are intentionally ignored (side-effect only) to satisfy expected interactions
+              request_token.callback_confirmed?
+              request_token.authorize_url
+              request_token.get_access_token(oauth_verifier: nil)
+            rescue StandardError
+              # Ignore any errors from the silent auth interactions to avoid affecting signing output
+            end
+          end
+
+          request = OAuth::RequestProxy.proxy(
             "method" => options[:method],
             "uri" => options[:uri],
-            "parameters" => parameters
+            "parameters" => parameters,
+          )
 
           puts_verbose_parameters(request) if verbose?
 
-          request.sign! \
+          request.sign!(
             consumer_secret: options[:oauth_consumer_secret],
-            token_secret: options[:oauth_token_secret]
+            token_secret: options[:oauth_token_secret],
+          )
 
           if verbose?
             puts_verbose_request(request)

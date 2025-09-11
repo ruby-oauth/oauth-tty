@@ -5,9 +5,9 @@ module OAuth
     module Commands
       class VersionCommand < Command
         def run
-          puts <<-VERSION
-    OAuth Gem #{OAuth::Version::VERSION}
-    OAuth TTY Gem #{OAuth::TTY::Version::VERSION}
+          puts <<~VERSION
+            OAuth Gem #{OAuth::Version::VERSION}
+            OAuth TTY Gem #{OAuth::TTY::Version::VERSION}
           VERSION
         end
       end

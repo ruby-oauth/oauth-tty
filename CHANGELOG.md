@@ -1,22 +1,42 @@
 # Changelog
+
+[![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]
+
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog][📗keep-changelog],
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html),
+and [yes][📌major-versions-not-sacred], platform and engine support are part of the [public API][📌semver-breaking].
+Please file a bug if you notice a violation of semantic versioning.
+
+[📌semver]: https://semver.org/spec/v2.0.0.html
+[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
+[📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
+[📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
+[📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
+[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 
 ## [Unreleased]
 ### Added
+- More documentation (@Aboling0, @pboling)
+- Deployed documentation site for HEAD (@Aboling0)
+    - https://oauth-tty.galtzo.com
 ### Changed
-### Fixed
+- Upgrade Code of Conduct to Contributor Covenant 2.1 (@pboling)
+### Deprecated
 ### Removed
+### Fixed
+### Security
 
-## [1.0.5] - 2022-09-20 ([tag][1.0.5t])
+## [1.0.5] - 2022-09-20
+- TAG: [v1.0.5][1.0.5t]
 ### Added
 - SHA 256 Checksum for release (in addition to SHA 512) (@pboling)
 - Aligned checksums directory name with `rake build:checksum` task (@pboling)
 - General Cleanup
 
-## [1.0.4] - 2022-09-19 ([tag][1.0.4t])
+## [1.0.4] - 2022-09-19
+- TAG: [1.0.4][1.0.4t]
 ### Added
 - Certificate for signing gem releases (@pboling)
 - Gemspec metadata (@pboling)
@@ -27,19 +47,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Gem releases are now cryptographically signed (@pboling)
 
-## [1.0.3] - 2022-09-06 ([tag][1.0.3t])
+## [1.0.3] - 2022-09-06
+- TAG: [1.0.3][1.0.3t]
 ### Fixed
 - Author name - Thaigo Pinto (@pboling)
 
-## [1.0.2] - 2022-08-26 ([tag][1.0.2t])
+## [1.0.2] - 2022-08-26
+- TAG: [1.0.2][1.0.2t]
 ### Fixed
 - URLs in Gemspec (@pboling)
 
-## [1.0.1] - 2022-08-26 ([tag][1.0.1t])
+## [1.0.1] - 2022-08-26
+- TAG: [1.0.1][1.0.1t]
 ### Fixed
 - Circular reference while loading (@pboling)
 
-## [1.0.0] - 2022-08-26 ([tag][1.0.0t])
+## [1.0.0] - 2022-08-26
+- TAG: [1.0.0][1.0.0t]
 ### Added
 - Initial release (@pboling)
 

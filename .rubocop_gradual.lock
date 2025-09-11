@@ -1,0 +1,47 @@
+{
+  "lib/oauth/tty/cli.rb:904168046": [
+    [6, 7, 77, "Style/ClassMethodsDefinitions: Use `class << self` to define a class method.", 2883780555]
+  ],
+  "lib/oauth/tty/command.rb:3092098200": [
+    [126, 23, 4, "Security/Open: The use of `Kernel#open` is a serious security risk.", 2087926481]
+  ],
+  "oauth-tty.gemspec:3967633356": [
+    [130, 3, 40, "Gemspec/DependencyVersion: Dependency version specification is required.", 2300588954],
+    [132, 3, 44, "Gemspec/DependencyVersion: Dependency version specification is required.", 1905290578],
+    [133, 3, 46, "Gemspec/DependencyVersion: Dependency version specification is required.", 4289565910]
+  ],
+  "spec/oauth/backwards_compatibility_spec.rb:4041711732": [
+    [3, 16, 25, "RSpec/DescribeClass: The first argument to describe should be the class or module being tested.", 3956042931]
+  ],
+  "spec/oauth/tty/cli_spec.rb:361981118": [
+    [3, 1, 30, "RSpec/SpecFilePathFormat: Spec path should end with `o_auth/tty/cli*_spec.rb`.", 2849860169],
+    [109, 34, 17, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 285748316],
+    [110, 38, 20, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 1228090493],
+    [111, 34, 10, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 4294324198],
+    [113, 7, 73, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [114].", 39742504],
+    [114, 7, 85, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [113].", 4144335528],
+    [130, 7, 20, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 4235470523],
+    [154, 38, 20, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 1228090493],
+    [155, 34, 17, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 285748316],
+    [156, 39, 21, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 3390344648],
+    [158, 7, 73, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [159].", 39742504],
+    [159, 7, 85, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [158].", 4144335528],
+    [169, 7, 16, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 3492346277],
+    [170, 7, 21, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2407753262],
+    [171, 7, 21, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2407753262],
+    [172, 7, 21, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2407753262],
+    [195, 38, 20, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 1228090493],
+    [196, 34, 17, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 285748316],
+    [197, 39, 21, "RSpec/VerifiedDoubleReference: Use a constant class reference for verified doubles. String references are not verifying unless the class is loaded.", 3390344648],
+    [199, 7, 73, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [200].", 39742504],
+    [200, 7, 85, "RSpec/ReceiveMessages: Use `receive_messages` instead of multiple stubs on lines [199].", 4144335528],
+    [210, 7, 16, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 3492346277],
+    [211, 7, 21, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2407753262],
+    [212, 7, 21, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2407753262],
+    [213, 7, 21, "RSpec/StubbedMock: Prefer `allow` over `expect` when configuring a response.", 2407753262]
+  ],
+  "spec/oauth/tty_spec.rb:1891755344": [
+    [3, 1, 25, "RSpec/EmptyExampleGroup: Empty example group detected.", 208109039],
+    [3, 1, 25, "RSpec/SpecFilePathFormat: Spec path should end with `o_auth/tty*_spec.rb`.", 208109039]
+  ]
+}

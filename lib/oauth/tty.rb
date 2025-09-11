@@ -3,7 +3,7 @@
 # stdlib
 require "optparse"
 
-# third party gems
+# external gems
 require "version_gem"
 
 # For initial release as a standalone gem, this gem must not declare oauth as a dependency,
@@ -11,8 +11,15 @@ require "version_gem"
 # It will move to a declared dependency in a subsequent release.
 require "oauth"
 
-# this gem
+# this gem's version
 require_relative "tty/version"
+
+# Configure version before loading the rest of the library
+OAuth::TTY::Version.class_eval do
+  extend VersionGem::Basic
+end
+
+# this gem
 require_relative "tty/cli"
 require_relative "tty/command"
 require_relative "tty/commands/help_command"
@@ -25,8 +32,4 @@ module OAuth
   # The namespace of this gem
   module TTY
   end
-end
-
-OAuth::TTY::Version.class_eval do
-  extend VersionGem::Basic
 end

@@ -1,26 +1,13 @@
-inherit_from: .rubocop_todo.yml
-
 inherit_gem:
-  rubocop-lts: rubocop-lts.yml
+  rubocop-lts: config/rubygem_rspec.yml
 
-require:
-  - 'rubocop-md'
-  - 'rubocop-minitest'
-  - 'rubocop-packaging'
-  - 'rubocop-performance'
-  - 'rubocop-rake'
-  - 'rubocop-thread_safety'
+inherit_from:
+  - .rubocop_rspec.yml
 
-AllCops:
-  DisplayCopNames: true # Display the name of the failing cops
+plugins: rubocop-on-rbs
 
-Style/StringLiterals:
+RBS:
   Enabled: true
-  EnforcedStyle: double_quotes
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120
+Layout/IndentationConsistency:
+  Exclude: ['*.md']

@@ -19,8 +19,11 @@ module OAuth
         end
 
         def _run
-          consumer = OAuth::Consumer.new(options[:oauth_consumer_key], options[:oauth_consumer_secret],
-                                         scheme: options[:scheme])
+          consumer = OAuth::Consumer.new(
+            options[:oauth_consumer_key],
+            options[:oauth_consumer_secret],
+            scheme: options[:scheme],
+          )
 
           access_token = OAuth::AccessToken.new(consumer, options[:oauth_token], options[:oauth_token_secret])
 
@@ -32,7 +35,7 @@ module OAuth
             end * "&"
           end
           uri.query = [uri.query, *params].compact * "&"
-          puts uri.to_s
+          puts uri
 
           response = access_token.request(options[:method].to_s.downcase.to_sym, uri.to_s)
           puts "#{response.code} #{response.message}"
