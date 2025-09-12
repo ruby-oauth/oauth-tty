@@ -12,7 +12,8 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from <gem name>.gemspec
 gemspec
 
-gem "oauth", ">= 1.1.0"
+# gem "oauth", ">= 1.1.0"
+gem "oauth", github: "ruby-oauth/oauth", branch: "main"
 
 # Debugging
 eval_gemfile "gemfiles/modular/debug.gemfile"
