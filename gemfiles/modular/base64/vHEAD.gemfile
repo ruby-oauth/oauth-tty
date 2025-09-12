@@ -1,0 +1,2 @@
+# Ruby >= 3.2 (dependency of kettle-dev)
+gem "base64", github: "ruby/base64", branch: "master"

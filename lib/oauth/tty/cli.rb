@@ -12,7 +12,7 @@ module OAuth
         "v" => "version",
         "q" => "query",
         "a" => "authorize",
-        "s" => "sign"
+        "s" => "sign",
       }.freeze
 
       def initialize(stdout, stdin, stderr, command, arguments)
@@ -42,7 +42,7 @@ module OAuth
         when *ALIASES.values
           command
         else
-          OAuth::TTY::CLI.puts_red "Command '#{command}' not found"
+          OAuth::TTY::CLI.puts_red("Command '#{command}' not found")
           "help"
         end
       end

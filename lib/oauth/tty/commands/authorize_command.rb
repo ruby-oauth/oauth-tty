@@ -31,23 +31,24 @@ module OAuth
 
         def get_request_token
           consumer = get_consumer
-          scope_options = options[:scope] ? { "scope" => options[:scope] } : {}
-          consumer.get_request_token({ oauth_callback: options[:oauth_callback] }, scope_options)
+          scope_options = options[:scope] ? {"scope" => options[:scope]} : {}
+          consumer.get_request_token({oauth_callback: options[:oauth_callback]}, scope_options)
         rescue OAuth::Unauthorized => e
-          alert "A problem occurred while attempting to authorize:"
-          alert e
-          alert e.request.body
+          alert("A problem occurred while attempting to authorize:")
+          alert(e)
+          alert(e.request.body)
         end
 
         def get_consumer
-          OAuth::Consumer.new \
+          OAuth::Consumer.new(
             options[:oauth_consumer_key],
             options[:oauth_consumer_secret],
             access_token_url: options[:access_token_url],
             authorize_url: options[:authorize_url],
             request_token_url: options[:request_token_url],
             scheme: options[:scheme],
-            http_method: options[:method].to_s.downcase.to_sym
+            http_method: options[:method].to_s.downcase.to_sym,
+          )
         end
 
         def ask_user_for_verifier
@@ -69,9 +70,9 @@ module OAuth
             puts "  #{k}: #{v}" unless k.is_a?(Symbol)
           end
         rescue OAuth::Unauthorized => e
-          alert "A problem occurred while attempting to obtain an access token:"
-          alert e
-          alert e.request.body
+          alert("A problem occurred while attempting to obtain an access token:")
+          alert(e)
+          alert(e.request.body)
         end
       end
     end

@@ -32,7 +32,7 @@ module OAuth
 
       def show_missing(array)
         array = array.map { |s| "--#{s}" }.join(" ")
-        OAuth::TTY::CLI.puts_red "Options missing to OAuth CLI: #{array}"
+        OAuth::TTY::CLI.puts_red("Options missing to OAuth CLI: #{array}")
       end
 
       def xmpp?
@@ -54,7 +54,7 @@ module OAuth
       def parameters
         @parameters ||= begin
           escaped_pairs = options[:params].collect do |pair|
-            if /:/.match?(pair)
+            if pair.to_s.include?(":")
               Hash[*pair.split(":", 2)].collect do |k, v|
                 [CGI.escape(k.strip), CGI.escape(v.strip)].join("=")
               end
@@ -72,7 +72,7 @@ module OAuth
             "oauth_timestamp" => options[:oauth_timestamp],
             "oauth_token" => options[:oauth_token],
             "oauth_signature_method" => options[:oauth_signature_method],
-            "oauth_version" => options[:oauth_version]
+            "oauth_version" => options[:oauth_version],
           }.reject { |_k, v| v.nil? || v == "" }.merge(cli_params)
         end
       end

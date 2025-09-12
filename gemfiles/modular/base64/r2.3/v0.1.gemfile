@@ -1,0 +1,2 @@
+# last version compatible with ruby 2.3.x
+gem "base64", "~> 0.1", ">= 0.1.2" # ruby >= 2.3.0
