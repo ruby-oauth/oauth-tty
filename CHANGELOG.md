@@ -18,16 +18,20 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ## [Unreleased]
 ### Added
-- (dev) kettle-dev v1.1.16
-- More documentation (@Aboling0, @pboling)
-- Deployed documentation site for HEAD (@Aboling0)
+- (dev) kettle-dev v1.1.16 (@pboling)
+- (docs) more documentation (@Aboling0, @pboling)
+- (docs) Deployed documentation site for HEAD (@Aboling0)
     - https://oauth-tty.galtzo.com
+- (test) many new tests (@pboling)
+- (docs) CITATION.cff
+- support window increased, down to Ruby 2.3 (@pboling)
 ### Changed
-- Upgrade Code of Conduct to Contributor Covenant 2.1 (@pboling)
-- migrated test suite to RSpec
+- (docs) upgrade Code of Conduct to Contributor Covenant 2.1 (@pboling)
+- (test) migrated test suite to RSpec (@pboling)
+- (test) ignore Ruby warnings coming from other libs (@pboling)
 ### Deprecated
 ### Removed
-- minitest
+- (test) minitest (@pboling)
 ### Fixed
 ### Security
 
