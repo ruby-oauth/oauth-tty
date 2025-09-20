@@ -95,7 +95,7 @@ Gem::Specification.new do |spec|
   spec.executables = ["oauth"]
 
   # Utilities
-  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.8")              # ruby >= 2.2.0
+  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.9")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
   #       visibility and discoverability on RubyGems.org.
@@ -112,7 +112,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 1.0")            # ruby >= 2.3.0
+  spec.add_development_dependency("kettle-dev", "~> 1.1")            # ruby >= 2.3.0
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.2")                      # ruby >= 2.0.0
