@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["Thiago Pinto", "Peter Boling"]
   spec.email = ["floss@galtzo.com", "oauth-ruby@googlegroups.com"]
 
-  spec.summary = "🖥️ OAuth 1.0 TTY CLI"
-  spec.description = "🖥️ OAuth 1.0 TTY Command Line Interface"
+  spec.summary = "🖥️ OAuth 1.0 / 1.0a TTY CLI"
+  spec.description = "🖥️ OAuth 1.0 / 1.0a TTY Command Line Interface"
   spec.homepage = "https://github.com/ruby-oauth/oauth-tty"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 2.3.0"
