@@ -17,7 +17,9 @@ Please file a bug if you notice a violation of semantic versioning.
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 
 ## [Unreleased]
+
 ### Added
+
 - (dev) kettle-dev v1.1.16 (@pboling)
 - (docs) more documentation (@Aboling0, @pboling)
 - (docs) Deployed documentation site for HEAD (@Aboling0)
@@ -25,53 +27,80 @@ Please file a bug if you notice a violation of semantic versioning.
 - (test) many new tests (@pboling)
 - (docs) CITATION.cff
 - support window increased, down to Ruby 2.3 (@pboling)
+
 ### Changed
+
 - (docs) upgrade Code of Conduct to Contributor Covenant 2.1 (@pboling)
 - (test) migrated test suite to RSpec (@pboling)
 - (test) ignore Ruby warnings coming from other libs (@pboling)
+
 ### Deprecated
+
 ### Removed
+
 - (test) minitest (@pboling)
+
 ### Fixed
+
 ### Security
 
 ## [1.0.5] - 2022-09-20
+
 - TAG: [v1.0.5][1.0.5t]
+
 ### Added
+
 - SHA 256 Checksum for release (in addition to SHA 512) (@pboling)
 - Aligned checksums directory name with `rake build:checksum` task (@pboling)
 - General Cleanup
 
 ## [1.0.4] - 2022-09-19
+
 - TAG: [1.0.4][1.0.4t]
+
 ### Added
+
 - Certificate for signing gem releases (@pboling)
 - Gemspec metadata (@pboling)
   - funding_uri
   - mailing_list_uri
 - Installation and usage documentation (@pboling)
 - SHA 512 Checksum for release (@pboling)
+
 ### Changed
+
 - Gem releases are now cryptographically signed (@pboling)
 
 ## [1.0.3] - 2022-09-06
+
 - TAG: [1.0.3][1.0.3t]
+
 ### Fixed
+
 - Author name - Thaigo Pinto (@pboling)
 
 ## [1.0.2] - 2022-08-26
+
 - TAG: [1.0.2][1.0.2t]
+
 ### Fixed
+
 - URLs in Gemspec (@pboling)
 
 ## [1.0.1] - 2022-08-26
+
 - TAG: [1.0.1][1.0.1t]
+
 ### Fixed
+
 - Circular reference while loading (@pboling)
 
 ## [1.0.0] - 2022-08-26
+
 - TAG: [1.0.0][1.0.0t]
+
 ### Added
+
 - Initial release (@pboling)
 
 [Unreleased]: https://gitlab.com/ruby-oauth/oauth-tty/-/compare/v1.0.5...main

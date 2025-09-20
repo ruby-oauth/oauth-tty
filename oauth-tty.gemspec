@@ -91,7 +91,7 @@ Gem::Specification.new do |spec|
   ]
   spec.require_paths = ["lib"]
   spec.bindir = "exe"
-  # files listed are relative paths from bindir above.
+  # Listed files are the relative paths from bindir above.
   spec.executables = ["oauth"]
 
   # Utilities
@@ -101,12 +101,11 @@ Gem::Specification.new do |spec|
   #       visibility and discoverability on RubyGems.org.
   #       However, development dependencies in gemspec will install on
   #       all versions of Ruby that will run in CI.
-  #       This gem, and its gemspec runtime dependencies, will install on Ruby down to 2.3.x.
-  #       This gem, and its gemspec development dependencies, will install on Ruby down to 2.3.x.
-  #       This is because in CI easy installation of Ruby, via setup-ruby, is for >= 2.3.
+  #       This gem, and its gemspec runtime dependencies, will install on Ruby down to 2.3.0.
+  #       This gem, and its gemspec development dependencies, will install on Ruby down to 2.3.0.
   #       Thus, dev dependencies in gemspec must have
   #
-  #       required_ruby_version ">= 2.3" (or lower)
+  #       required_ruby_version ">= 2.3.0" (or lower)
   #
   #       Development dependencies that require strictly newer Ruby versions should be in a "gemfile",
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
@@ -151,9 +150,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("gitmoji-regex", "~> 1.0", ">= 1.0.3")            # ruby >= 2.3.0
 
   # HTTP recording for deterministic specs
-  # It seems that somehow just having a newer version of appraisal installed breaks
-  #   Ruby 2.3 and 2.4 even if their bundle specifies an older version,
-  #   and as a result it can only be a dependency in the appraisals.
+  # Ruby 2.3 / 2.4 can fail with:
   # | An error occurred while loading spec_helper.
   # | Failure/Error: require "vcr"
   # |
@@ -163,8 +160,11 @@ Gem::Specification.new do |spec|
   # | # ./spec/config/vcr.rb:3:in `<top (required)>'
   # | # ./spec/spec_helper.rb:8:in `require_relative'
   # | # ./spec/spec_helper.rb:8:in `<top (required)>'
-  # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
-  # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
-  # spec.add_development_dependency("backports", "~> 3.25", ">= 3.25.1")  # ruby >= 0
-
+  # So that's why we need backports.
+  spec.add_development_dependency("backports", "~> 3.25", ">= 3.25.1")  # ruby >= 0
+  # In Ruby 3.5 (HEAD) the CGI library has been pared down, so we also need to depend on gem "cgi" for ruby@head
+  # This is done in the "head" appraisal.
+  # See: https://github.com/vcr/vcr/issues/1057
+  spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
+  spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
 end

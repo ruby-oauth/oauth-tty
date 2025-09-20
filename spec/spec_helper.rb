@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+# Global Extensions
+require_relative "ext/backports"
+
+# External libraries
+require "addressable/uri"
+require "rspec/pending_for"
+
 # External RSpec & related config
 require "kettle/test/rspec"
 
@@ -18,7 +25,7 @@ require_relative "config/rspec/version_gem"
 # Config for development dependencies of this library
 # i.e., not configured by this library
 #
-# Simplecov & related config (must run BEFORE any other requires)
+# Simplecov & related config (must run BEFORE any of this library is loaded)
 # NOTE: Gemfiles for older rubies won't have kettle-soup-cover.
 #       The rescue LoadError handles that scenario.
 begin
@@ -29,5 +36,5 @@ rescue LoadError => error
   raise error unless error.message.include?("kettle")
 end
 
-# this library
+# This gem
 require "oauth/tty"
