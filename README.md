@@ -457,7 +457,7 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
         </a>, and oauth-tty contributors.
     </li>
     <li>
-        2016-2017 Thiago Pinto
+        Copyright (c) 2016-2017 Thiago Pinto
     </li>
 </ul>
 
