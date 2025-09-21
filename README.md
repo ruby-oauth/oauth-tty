@@ -24,13 +24,12 @@
 OAuth 1.0a is an industry-standard protocol for authorization.
 It is an update to the original OAuth 1.0 protocol, and is used by many popular services.
 
-This is a RubyGem for implementing OAuth 1.0 or 1.0a _clients_ and _servers_ in Ruby applications.
-See the sibling `oauth2` gem for OAuth 2.0, 2.1, & OIDC clients in Ruby.
+This RubyGem provides a CLI for OAuth 1.0 or 1.0a _clients_ and _servers_ in Ruby applications.
 
 All dependencies of this gem are signed, so it can be installed with a `HighSecurity` profile.
 
 * [OAuth 1.0 Spec][oauth1-spec]
-* [oauth gem][sibling-gem] for OAuth 1.0 / 1.0a client and server implementations in Ruby.
+* [oauth sibling gem][sibling-gem] for OAuth 1.0 / 1.0a client and server implementations in Ruby.
 * [oauth2 sibling gem][sibling2-gem] for OAuth 2.0 / 2.1, & OIDC client implementations in Ruby.
 
 [oauth1-spec]: http://oauth.net/core/1.0/
@@ -449,13 +448,16 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 
 <ul>
     <li>
-        Copyright (c) 2023, 2025 Peter H. Boling, of
+        Copyright (c) 2021-2022, 2025 Peter H. Boling, of
         <a href="https://discord.gg/3qme4XHNKN">
             Galtzo.com
             <picture>
               <img src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-128px-blank.svg" alt="Galtzo.com Logo (Wordless) by Aboling0, CC BY-SA 4.0" width="24">
             </picture>
         </a>, and oauth-tty contributors.
+    </li>
+    <li>
+        2016-2017 Thiago Pinto
     </li>
 </ul>
 
