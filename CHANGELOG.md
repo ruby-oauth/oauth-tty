@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.0.6] - 2025-09-21
+
+- TAG: [v1.0.6][1.0.6t]
+- COVERAGE: 100.00% -- 296/296 lines in 10 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 10 files
+- 11.43% documented
+
+### Added
+
 - (dev) kettle-dev v1.1.16 (@pboling)
 - (docs) more documentation (@Aboling0, @pboling)
 - (docs) Deployed documentation site for HEAD (@Aboling0)
@@ -36,8 +55,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - (test) migrated test suite to RSpec (@pboling)
 - (test) ignore Ruby warnings coming from other libs (@pboling)
 
-### Deprecated
-
 ### Removed
 
 - (test) minitest (@pboling)
@@ -47,8 +64,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - Fixed issues in option parsing by implementing Command#parse_options (@pboling)
   - Use Shellwords for proper tokenization
   - Verified options file loading and CLI flag precedence
-
-### Security
 
 ## [1.0.5] - 2022-09-20
 
@@ -109,7 +124,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://gitlab.com/ruby-oauth/oauth-tty/-/compare/v1.0.5...main
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.6...HEAD
+[1.0.6]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.5...v1.0.6
+[1.0.6t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.6
 [1.0.5]: https://gitlab.com/ruby-oauth/oauth-tty/-/compare/v1.0.4...v1.0.5
 [1.0.5t]: https://gitlab.com/ruby-oauth/oauth-tty/-/releases/tag/v1.0.5
 [1.0.4]: https://gitlab.com/ruby-oauth/oauth-tty/-/compare/v1.0.3...v1.0.4
