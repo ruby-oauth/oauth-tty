@@ -124,7 +124,6 @@ Gem::Specification.new do |spec|
 
   # Testing
   spec.add_development_dependency("appraisal2", "~> 3.0")                           # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("em-http-request", "~> 1.1.7")
   spec.add_development_dependency("kettle-test", "~> 1.0")                          # ruby >= 2.3
   spec.add_development_dependency("mocha")
   spec.add_development_dependency("rack", "~> 2.0")
