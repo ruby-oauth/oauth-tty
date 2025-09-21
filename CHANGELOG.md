@@ -27,6 +27,8 @@ Please file a bug if you notice a violation of semantic versioning.
 - (test) many new tests (@pboling)
 - (docs) CITATION.cff
 - support window increased, down to Ruby 2.3 (@pboling)
+- (test) added specs for oauth.opts usage (@pboling)
+- (test) added specs for all commands (@pboling)
 
 ### Changed
 
@@ -41,6 +43,10 @@ Please file a bug if you notice a violation of semantic versioning.
 - (test) minitest (@pboling)
 
 ### Fixed
+
+- Fixed issues in option parsing by implementing Command#parse_options (@pboling)
+  - Use Shellwords for proper tokenization
+  - Verified options file loading and CLI flag precedence
 
 ### Security
 

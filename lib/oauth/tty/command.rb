@@ -88,6 +88,25 @@ module OAuth
         end
       end
 
+      # Parse an array of CLI-like arguments into an options hash without mutating current state
+      # This is used by the -O/--options FILE feature to load args from a file and merge them
+      def parse_options(arguments)
+        original_options = @options
+        begin
+          temp_options = {}
+          @options = temp_options
+          _option_parser_defaults
+          OptionParser.new do |opts|
+            _option_parser_common(opts)
+            _option_parser_sign_and_query(opts)
+            _option_parser_authorization(opts)
+          end.parse!(arguments)
+          temp_options
+        ensure
+          @options = original_options
+        end
+      end
+
       def _option_parser_defaults
         options[:oauth_nonce] = OAuth::Helper.generate_key
         options[:oauth_signature_method] = "HMAC-SHA1"
@@ -123,7 +142,8 @@ module OAuth
         end
 
         opts.on("-O", "--options FILE", "Read options from a file") do |v|
-          arguments = open(v).readlines.map { |l| l.chomp.split }.flatten
+          require "shellwords"
+          arguments = File.open(v).readlines.flat_map { |l| Shellwords.shellsplit(l.chomp) }
           options2 = parse_options(arguments)
           options.merge!(options2)
         end

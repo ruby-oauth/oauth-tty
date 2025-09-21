@@ -1,0 +1,11 @@
+--consumer-key ck_123
+--consumer-secret cs_456
+--token at_789
+--secret ats_abc
+--nonce 4d7b2e0f9a
+--timestamp 1699999999
+--method GET
+--uri https://api.example.com/v1/profile
+--parameters foo:bar
+--parameters "status=active"
+--header

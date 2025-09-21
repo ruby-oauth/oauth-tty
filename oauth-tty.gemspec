@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["Thiago Pinto", "Peter Boling"]
   spec.email = ["floss@galtzo.com", "oauth-ruby@googlegroups.com"]
 
-  spec.summary = "🖥️ OAuth 1.0 TTY CLI"
-  spec.description = "🖥️ OAuth 1.0 TTY Command Line Interface"
+  spec.summary = "🖥️ OAuth 1.0 / 1.0a TTY CLI"
+  spec.description = "🖥️ OAuth 1.0 / 1.0a TTY Command Line Interface"
   spec.homepage = "https://github.com/ruby-oauth/oauth-tty"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 2.3.0"
@@ -124,7 +124,6 @@ Gem::Specification.new do |spec|
 
   # Testing
   spec.add_development_dependency("appraisal2", "~> 3.0")                           # ruby >= 1.8.7, for testing against multiple versions of dependencies
-  spec.add_development_dependency("em-http-request", "~> 1.1.7")
   spec.add_development_dependency("kettle-test", "~> 1.0")                          # ruby >= 2.3
   spec.add_development_dependency("mocha")
   spec.add_development_dependency("rack", "~> 2.0")

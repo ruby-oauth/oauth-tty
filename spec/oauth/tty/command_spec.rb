@@ -186,4 +186,9 @@ RSpec.describe OAuth::TTY::Command do
       expect(stderr.read).to eq("err!\n")
     end
   end
+
+  it "has no required options by default" do
+    command = described_class.new(stdout, stdin, stderr, [])
+    expect(command.required_options).to eq([])
+  end
 end
