@@ -5,26 +5,27 @@ RSpec.describe OAuth::TTY::Command do
   let(:stdin) { StringIO.new }
   let(:stderr) { StringIO.new }
 
-  # Minimal concrete subclass to enable exercising #run paths
-  class TestCommand < described_class
-    attr_writer :required
+  let(:test_command_class) do
+    Class.new(described_class) do
+      attr_writer :required
 
-    def initialize(stdout, stdin, stderr, arguments)
-      super
-      @required ||= []
-    end
+      def initialize(stdout, stdin, stderr, arguments)
+        super
+        @required ||= []
+      end
 
-    def required_options
-      @required
-    end
+      def required_options
+        @required
+      end
 
-    def _run
-      puts "ran" # use provided stdout
+      def _run
+        @stdout.puts "ran"
+      end
     end
   end
 
   def build_cmd(args = [])
-    TestCommand.new(stdout, stdin, stderr, args)
+    test_command_class.new(stdout, stdin, stderr, args)
   end
 
   describe "#run", :check_output do

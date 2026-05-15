@@ -106,12 +106,11 @@ RSpec.describe OAuth::TTY::CLI do
     end
 
     it "performs query and prints request/response" do
-      consumer = instance_double("OAuth::Consumer")
-      access_token = instance_double("OAuth::AccessToken")
-      response = instance_double("Response", code: "!code!", message: "!message!", body: "!body!")
+      consumer = instance_double(OAuth::Consumer)
+      access_token = instance_double(OAuth::AccessToken)
+      response = instance_double(Net::HTTPResponse, code: "!code!", message: "!message!", body: "!body!")
 
-      allow(OAuth::Helper).to receive(:generate_key).and_return("GENERATE_KEY")
-      allow(OAuth::Helper).to receive(:generate_timestamp).and_return("GENERATE_TIMESTAMP")
+      allow(OAuth::Helper).to receive_messages(generate_key: "GENERATE_KEY", generate_timestamp: "GENERATE_TIMESTAMP")
 
       expect(OAuth::Consumer).to receive(:new) do |key, secret, options|
         expect(key).to eq("oauth_consumer_key")
@@ -127,7 +126,7 @@ RSpec.describe OAuth::TTY::CLI do
         access_token
       end
 
-      expect(access_token).to receive(:request).with(:post, "http://example.com/oauth/url?oauth_consumer_key=oauth_consumer_key&oauth_nonce=GENERATE_KEY&oauth_timestamp=GENERATE_TIMESTAMP&oauth_token=TOKEN&oauth_signature_method=HMAC-SHA1&oauth_version=1.0").and_return(response)
+      allow(access_token).to receive(:request).with(:post, "http://example.com/oauth/url?oauth_consumer_key=oauth_consumer_key&oauth_nonce=GENERATE_KEY&oauth_timestamp=GENERATE_TIMESTAMP&oauth_token=TOKEN&oauth_signature_method=HMAC-SHA1&oauth_version=1.0").and_return(response)
 
       out = run_command %w[
         query
@@ -151,12 +150,11 @@ RSpec.describe OAuth::TTY::CLI do
     end
 
     it "performs authorize and prompts/prints response" do
-      access_token = instance_double("OAuth::AccessToken", params: {})
-      consumer = instance_double("OAuth::Consumer")
-      request_token = instance_double("OAuth::RequestToken")
+      access_token = instance_double(OAuth::AccessToken, params: {})
+      consumer = instance_double(OAuth::Consumer)
+      request_token = instance_double(OAuth::RequestToken)
 
-      allow(OAuth::Helper).to receive(:generate_key).and_return("GENERATE_KEY")
-      allow(OAuth::Helper).to receive(:generate_timestamp).and_return("GENERATE_TIMESTAMP")
+      allow(OAuth::Helper).to receive_messages(generate_key: "GENERATE_KEY", generate_timestamp: "GENERATE_TIMESTAMP")
 
       expect(OAuth::Consumer).to receive(:new) do |key, secret, options|
         expected = {access_token_url: nil, authorize_url: nil, request_token_url: nil, scheme: :header, http_method: :get}
@@ -166,10 +164,9 @@ RSpec.describe OAuth::TTY::CLI do
         consumer
       end
 
-      expect(consumer).to receive(:get_request_token).with({oauth_callback: nil}, {}).and_return(request_token)
-      expect(request_token).to receive(:callback_confirmed?).and_return(false)
-      expect(request_token).to receive(:authorize_url).and_return("!url1!")
-      expect(request_token).to receive(:get_access_token).with({oauth_verifier: nil}).and_return(access_token)
+      allow(consumer).to receive(:get_request_token).with({oauth_callback: nil}, {}).and_return(request_token)
+      allow(request_token).to receive_messages(callback_confirmed?: false, authorize_url: "!url1!")
+      allow(request_token).to receive(:get_access_token).with({oauth_verifier: nil}).and_return(access_token)
 
       out = run_command %w[
         authorize
@@ -192,12 +189,11 @@ RSpec.describe OAuth::TTY::CLI do
     end
 
     it "signs a request and prints signature details and value" do
-      access_token = instance_double("OAuth::AccessToken", params: {})
-      consumer = instance_double("OAuth::Consumer")
-      request_token = instance_double("OAuth::RequestToken")
+      access_token = instance_double(OAuth::AccessToken, params: {})
+      consumer = instance_double(OAuth::Consumer)
+      request_token = instance_double(OAuth::RequestToken)
 
-      allow(OAuth::Helper).to receive(:generate_key).and_return("GENERATE_KEY")
-      allow(OAuth::Helper).to receive(:generate_timestamp).and_return("GENERATE_TIMESTAMP")
+      allow(OAuth::Helper).to receive_messages(generate_key: "GENERATE_KEY", generate_timestamp: "GENERATE_TIMESTAMP")
 
       expect(OAuth::Consumer).to receive(:new) do |key, secret, options|
         expected = {access_token_url: nil, authorize_url: nil, request_token_url: nil, scheme: :header, http_method: :get}
@@ -207,10 +203,9 @@ RSpec.describe OAuth::TTY::CLI do
         consumer
       end
 
-      expect(consumer).to receive(:get_request_token).with({oauth_callback: nil}, {}).and_return(request_token)
-      expect(request_token).to receive(:callback_confirmed?).and_return(false)
-      expect(request_token).to receive(:authorize_url).and_return("!url1!")
-      expect(request_token).to receive(:get_access_token).with({oauth_verifier: nil}).and_return(access_token)
+      allow(consumer).to receive(:get_request_token).with({oauth_callback: nil}, {}).and_return(request_token)
+      allow(request_token).to receive_messages(callback_confirmed?: false, authorize_url: "!url1!")
+      allow(request_token).to receive(:get_access_token).with({oauth_verifier: nil}).and_return(access_token)
 
       out = []
 

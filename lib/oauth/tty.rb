@@ -4,6 +4,7 @@
 require "optparse"
 
 # external gems
+require "auth/sanitizer"
 require "version_gem"
 
 # For initial release as a standalone gem, this gem must not declare oauth as a dependency,

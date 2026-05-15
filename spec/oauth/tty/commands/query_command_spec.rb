@@ -17,13 +17,13 @@ RSpec.describe OAuth::TTY::Commands::QueryCommand, :check_output do
 
   it "appends parameters to the URI, performs the request, and prints status and body" do
     # Stub network objects so we don't make real HTTP calls
-    consumer = instance_double("OAuth::Consumer")
+    consumer = instance_double(OAuth::Consumer)
     allow(OAuth::Consumer).to receive(:new).and_return(consumer)
 
-    access_token = instance_double("OAuth::AccessToken")
+    access_token = instance_double(OAuth::AccessToken)
     allow(OAuth::AccessToken).to receive(:new).with(consumer, "at_789", "ats_abc").and_return(access_token)
 
-    fake_response = instance_double("Net::HTTPResponse", code: "200", message: "OK", body: "Hello world")
+    fake_response = instance_double(Net::HTTPResponse, code: "200", message: "OK", body: "Hello world")
 
     # Build args
     uri = "https://api.example.com/v1/profile"
@@ -52,7 +52,7 @@ RSpec.describe OAuth::TTY::Commands::QueryCommand, :check_output do
 
     expected_url = "#{uri}?oauth_consumer_key=ck_123&oauth_nonce=abc123&oauth_timestamp=1699999999&oauth_token=at_789&oauth_signature_method=HMAC-SHA1&oauth_version=1.0&foo=bar&status=active"
 
-    expect(access_token).to receive(:request).with(:get, expected_url).and_return(fake_response)
+    allow(access_token).to receive(:request).with(:get, expected_url).and_return(fake_response)
 
     out = run_cli("query", argv)
 

@@ -94,7 +94,11 @@ Gem::Specification.new do |spec|
   # Listed files are the relative paths from bindir above.
   spec.executables = ["oauth"]
 
+  # Standard Library Extracted Gems
+  spec.add_dependency("cgi", ">= 0")
+
   # Utilities
+  spec.add_dependency("auth-sanitizer", "~> 0.1")
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.9")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
@@ -125,10 +129,10 @@ Gem::Specification.new do |spec|
   # Testing
   spec.add_development_dependency("appraisal2", "~> 3.0")                           # ruby >= 1.8.7, for testing against multiple versions of dependencies
   spec.add_development_dependency("kettle-test", "~> 1.0")                          # ruby >= 2.3
-  spec.add_development_dependency("mocha")
+  spec.add_development_dependency("mocha", "~> 3.0")
   spec.add_development_dependency("rack", "~> 2.0")
-  spec.add_development_dependency("rack-test")
-  spec.add_development_dependency("rest-client")
+  spec.add_development_dependency("rack-test", "~> 2.0")
+  spec.add_development_dependency("rest-client", "~> 2.1")
   spec.add_development_dependency("rspec-pending_for", "~> 0.0", ">= 0.0.17")       # ruby >= 2.3, used to skip specs on incompatible Rubies
   spec.add_development_dependency("typhoeus", ">= 0.1.13")
 
