@@ -48,9 +48,11 @@ module OAuth
         []
       end
 
-      protected
+      private
 
       attr_reader :options
+
+      protected
 
       def show_missing(array)
         array = array.map { |s| "--#{s}" }.join(" ")
