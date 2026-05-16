@@ -21,6 +21,7 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Added
 
 - Add inspect-time secret redaction for command option state through `auth-sanitizer` integration.
+- Traditional OAuth::TTY::VERSION constant
 
 ### Changed
 
