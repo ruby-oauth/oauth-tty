@@ -12,7 +12,9 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from <gem name>.gemspec
 gemspec
 
-unless %w[false 0 no off].include?(ENV.fetch("RUBY_OAUTH_DEV", "false").downcase)
+if %w[false 0 no off].include?(ENV.fetch("RUBY_OAUTH_DEV", "false").downcase)
+  gem "oauth"
+else
   begin
     require "nomono/bundler" unless defined?(Nomono)
   rescue LoadError

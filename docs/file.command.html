@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  File: version
+  File: command
   
     &mdash; Documentation by YARD 0.9.43
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/common.css" type="text/css">
 
 <script type="text/javascript">
-  pathId = "version";
+  pathId = "command";
   relpath = '';
 </script>
 
@@ -39,7 +39,7 @@
         <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
-    <span class="title">File: version</span>
+    <span class="title">File: command</span>
   
 </div>
 
@@ -61,12 +61,18 @@
 
       <div id="content"><div id='filecontents'><p>module OAuth<br>
   module TTY<br>
-    module Version<br>
-      VERSION: String<br>
-      # See the writing guide of rbs: https://github.com/ruby/rbs#guides<br>
-    end<br>
-  end<br>
-end</p>
+    class Command<br>
+      include Auth::Sanitizer::FilteredAttributes</p>
+
+<pre class="code ruby"><code class="ruby">  def initialize: (untyped stdout, untyped stdin, untyped stderr, untyped arguments) -&gt; void
+  def run: () -&gt; untyped
+  def required_options: () -&gt; Array[untyped]
+
+  private
+
+  attr_reader options: untyped
+end   end end
+</code></pre>
 </div></div>
 
       <div id="footer">

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # stdlib
+require "cgi"
 require "optparse"
 
 # external gems

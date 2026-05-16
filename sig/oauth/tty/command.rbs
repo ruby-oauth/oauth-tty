@@ -7,7 +7,7 @@ module OAuth
       def run: () -> untyped
       def required_options: () -> Array[untyped]
 
-      private
+      protected
 
       attr_reader options: untyped
     end
