@@ -18,6 +18,27 @@ RSpec.describe OAuth::TTY::Commands::SignCommand, :check_output do
     out
   end
 
+  it "redacts options from inspect" do
+    command = described_class.new(stdout, stdin, stderr, [
+      "--consumer-key",
+      "ck_123",
+      "--consumer-secret",
+      "cs_456",
+      "--token",
+      "at_789",
+      "--secret",
+      "ats_abc",
+    ])
+
+    inspected = command.inspect
+
+    expect(inspected).to include("[FILTERED]")
+    expect(inspected).not_to include("ck_123")
+    expect(inspected).not_to include("cs_456")
+    expect(inspected).not_to include("at_789")
+    expect(inspected).not_to include("ats_abc")
+  end
+
   it "loads options from a file with -O and produces same signature as inline args (quoted values supported)" do
     require "shellwords"
     # Signature via -O file

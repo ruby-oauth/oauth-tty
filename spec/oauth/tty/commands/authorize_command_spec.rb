@@ -11,25 +11,23 @@ RSpec.describe OAuth::TTY::Commands::AuthorizeCommand do
 
   describe "#_run happy path with callback confirmed", :check_output do
     it "sets version to 1.0a and prompts for verifier, then prints response params" do
-      consumer = instance_double("OAuth::Consumer")
-      request_token = instance_double("OAuth::RequestToken")
-      access_token = instance_double("OAuth::AccessToken", params: {"oauth_token" => "OTK", :symbol_key => "ignored"})
+      consumer = instance_double(OAuth::Consumer)
+      request_token = instance_double(OAuth::RequestToken)
+      access_token = instance_double(OAuth::AccessToken, params: {"oauth_token" => "OTK", :symbol_key => "ignored"})
 
       # Provide deterministic nonce/timestamp used by defaults through Command
-      allow(OAuth::Helper).to receive(:generate_key).and_return("KEY")
-      allow(OAuth::Helper).to receive(:generate_timestamp).and_return("TS")
+      allow(OAuth::Helper).to receive_messages(generate_key: "KEY", generate_timestamp: "TS")
 
-      expect(OAuth::Consumer).to receive(:new).and_return(consumer)
-      expect(consumer).to receive(:get_request_token).with({oauth_callback: nil}, {}).and_return(request_token)
+      allow(OAuth::Consumer).to receive(:new).and_return(consumer)
+      allow(consumer).to receive(:get_request_token).with({oauth_callback: nil}, {}).and_return(request_token)
 
-      expect(request_token).to receive(:callback_confirmed?).and_return(true)
-      expect(request_token).to receive(:authorize_url).and_return("https://example.com/authorize")
+      allow(request_token).to receive_messages(callback_confirmed?: true, authorize_url: "https://example.com/authorize")
 
       # stdin provides a verifier when version is 1.0a
       stdin.write("VERIFIER\n")
       stdin.rewind
 
-      expect(request_token).to receive(:get_access_token).with({oauth_verifier: "VERIFIER"}).and_return(access_token)
+      allow(request_token).to receive(:get_access_token).with({oauth_verifier: "VERIFIER"}).and_return(access_token)
 
       stdout.string.dup
       build_cmd(%w[--consumer-key CK --consumer-secret CS --method GET --uri https://example.com]).run
@@ -49,12 +47,12 @@ RSpec.describe OAuth::TTY::Commands::AuthorizeCommand do
 
   describe "error handling", :check_output do
     it "alerts when get_request_token raises OAuth::Unauthorized" do
-      consumer = instance_double("OAuth::Consumer")
+      consumer = instance_double(OAuth::Consumer)
 
-      expect(OAuth::Consumer).to receive(:new).and_return(consumer)
-      Request = Struct.new(:body, :code, :message)
-      error = OAuth::Unauthorized.new(Request.new("denied", 401, "401 Unauthorized"))
-      expect(consumer).to receive(:get_request_token).and_raise(error)
+      allow(OAuth::Consumer).to receive(:new).and_return(consumer)
+      request_class = Struct.new(:body, :code, :message)
+      error = OAuth::Unauthorized.new(request_class.new("denied", 401, "401 Unauthorized"))
+      allow(consumer).to receive(:get_request_token).and_raise(error)
 
       build_cmd(%w[--consumer-key CK --consumer-secret CS --uri https://example.com]).send(:get_request_token)
 
@@ -65,16 +63,15 @@ RSpec.describe OAuth::TTY::Commands::AuthorizeCommand do
     end
 
     it "alerts when get_access_token raises OAuth::Unauthorized" do
-      consumer = instance_double("OAuth::Consumer")
-      request_token = instance_double("OAuth::RequestToken")
-      expect(OAuth::Consumer).to receive(:new).and_return(consumer)
-      expect(consumer).to receive(:get_request_token).and_return(request_token)
+      consumer = instance_double(OAuth::Consumer)
+      request_token = instance_double(OAuth::RequestToken)
+      allow(OAuth::Consumer).to receive(:new).and_return(consumer)
+      allow(consumer).to receive(:get_request_token).and_return(request_token)
 
-      Request2 = Struct.new(:body, :code, :message)
-      error = OAuth::Unauthorized.new(Request2.new("bad_access", 401, "401 Unauthorized"))
-      expect(request_token).to receive(:callback_confirmed?).and_return(false)
-      expect(request_token).to receive(:authorize_url).and_return("https://example.com/authorize")
-      expect(request_token).to receive(:get_access_token).and_raise(error)
+      request_class = Struct.new(:body, :code, :message)
+      error = OAuth::Unauthorized.new(request_class.new("bad_access", 401, "401 Unauthorized"))
+      allow(request_token).to receive_messages(callback_confirmed?: false, authorize_url: "https://example.com/authorize")
+      allow(request_token).to receive(:get_access_token).and_raise(error)
 
       build_cmd(%w[--consumer-key CK --consumer-secret CS --uri https://example.com]).run
 

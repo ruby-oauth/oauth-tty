@@ -20,7 +20,11 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+- Add inspect-time secret redaction for command option state through `auth-sanitizer` integration.
+
 ### Changed
+
+- Redact the command options hash from `OAuth::TTY::Command#inspect` because it may contain credential-bearing CLI arguments.
 
 ### Deprecated
 

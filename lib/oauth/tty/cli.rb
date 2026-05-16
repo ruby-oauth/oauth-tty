@@ -3,8 +3,10 @@
 module OAuth
   module TTY
     class CLI
-      def self.puts_red(string)
-        puts "\033[0;91m#{string}\033[0m"
+      class << self
+        def puts_red(string)
+          puts "\033[0;91m#{string}\033[0m"
+        end
       end
 
       ALIASES = {

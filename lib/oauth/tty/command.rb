@@ -2,7 +2,18 @@
 
 module OAuth
   module TTY
+    # Base class for oauth-tty commands.
+    #
+    # Includes {Auth::Sanitizer::FilteredAttributes} so inspect output redacts
+    # the accumulated command options hash, which may contain consumer or token
+    # secrets read from CLI flags or option files.
     class Command
+      include Auth::Sanitizer::FilteredAttributes
+
+      # Redact parser-related state from inspect output because it can include
+      # credential-bearing CLI arguments and parser internals that retain them.
+      filtered_attributes :options, :option_parser
+
       def initialize(stdout, stdin, stderr, arguments)
         @stdout = stdout
         @stdin = stdin
@@ -10,6 +21,17 @@ module OAuth
 
         @options = {}
         option_parser.parse!(arguments)
+      end
+
+      def inspect
+        format(
+          "#<%<klass>s:0x%<object_id>x @stdout=%<stdout>s, @stdin=%<stdin>s, @stderr=%<stderr>s, @options=[FILTERED], @option_parser=[FILTERED]>",
+          klass: self.class,
+          object_id: object_id,
+          stdout: @stdout.inspect,
+          stdin: @stdin.inspect,
+          stderr: @stderr.inspect,
+        )
       end
 
       def run
@@ -26,9 +48,11 @@ module OAuth
         []
       end
 
-      protected
+      private
 
       attr_reader :options
+
+      protected
 
       def show_missing(array)
         array = array.map { |s| "--#{s}" }.join(" ")
