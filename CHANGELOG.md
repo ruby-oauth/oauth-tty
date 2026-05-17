@@ -20,12 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Add inspect-time secret redaction for command option state through `auth-sanitizer` integration.
-- Traditional OAuth::TTY::VERSION constant
-
 ### Changed
-
-- Redact the command options hash from `OAuth::TTY::Command#inspect` because it may contain credential-bearing CLI arguments.
 
 ### Deprecated
 
@@ -34,6 +29,22 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [1.0.7] - 2026-05-16
+
+- TAG: [v1.0.7][1.0.7t]
+- COVERAGE: 100.00% -- 305/305 lines in 10 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 10 files
+- 16.22% documented
+
+### Added
+
+- Add inspect-time secret redaction for command option state through `auth-sanitizer` integration.
+- Traditional OAuth::TTY::VERSION constant
+
+### Changed
+
+- Redact the command options hash from `OAuth::TTY::Command#inspect` because it may contain credential-bearing CLI arguments.
 
 ## [1.0.6] - 2025-09-21
 
@@ -129,7 +140,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.6...HEAD
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.7...HEAD
+[1.0.7]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.6...v1.0.7
+[1.0.7t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.7
 [1.0.6]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.5...v1.0.6
 [1.0.6t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.6
 [1.0.5]: https://gitlab.com/ruby-oauth/oauth-tty/-/compare/v1.0.4...v1.0.5
