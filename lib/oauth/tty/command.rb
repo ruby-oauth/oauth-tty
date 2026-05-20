@@ -4,11 +4,11 @@ module OAuth
   module TTY
     # Base class for oauth-tty commands.
     #
-    # Includes {Auth::Sanitizer::FilteredAttributes} so inspect output redacts
+    # Includes {OAuth::TTY::AUTH_SANITIZER::FilteredAttributes} so inspect output redacts
     # the accumulated command options hash, which may contain consumer or token
     # secrets read from CLI flags or option files.
     class Command
-      include Auth::Sanitizer::FilteredAttributes
+      include OAuth::TTY::AUTH_SANITIZER::FilteredAttributes
 
       # Redact parser-related state from inspect output because it can include
       # credential-bearing CLI arguments and parser internals that retain them.

@@ -1,7 +1,7 @@
 module OAuth
   module TTY
     class Command
-      include Auth::Sanitizer::FilteredAttributes
+      include OAuth::TTY::AUTH_SANITIZER::FilteredAttributes
 
       def initialize: (untyped stdout, untyped stdin, untyped stderr, untyped arguments) -> void
       def run: () -> untyped
