@@ -98,7 +98,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency("cgi", ">= 0")
 
   # Utilities
-  spec.add_dependency("auth-sanitizer", "~> 0.1")
+  spec.add_dependency("auth-sanitizer", "~> 0.1", ">= 0.1.3")           # ruby >= 2.2.0
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.9")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased

@@ -5,7 +5,6 @@ require "cgi"
 require "optparse"
 
 # external gems
-require "auth/sanitizer"
 require "version_gem"
 
 # For initial release as a standalone gem, this gem must not declare oauth as a dependency,
@@ -15,6 +14,7 @@ require "oauth"
 
 # this gem's version
 require_relative "tty/version"
+require_relative "tty/auth_sanitizer"
 
 # Configure version before loading the rest of the library
 OAuth::TTY::Version.class_eval do
