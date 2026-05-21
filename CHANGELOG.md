@@ -22,17 +22,28 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- auth-sanitizer v0.1.3
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
-- Load `auth-sanitizer` through an internal isolated loader so requiring `oauth/tty` does not add top-level `Auth` or `AuthSanitizer` constants that may collide with downstream applications.
-
 ### Security
+
+## [1.0.8] - 2026-05-20
+
+- TAG: [v1.0.8][1.0.8t]
+- COVERAGE: 100.00% -- 315/315 lines in 11 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 11 files
+- 15.79% documented
+
+### Changed
+
+- auth-sanitizer v0.1.3
+
+### Fixed
+
+- Load `auth-sanitizer` through an internal isolated loader so requiring `oauth/tty` does not add top-level `Auth` or `AuthSanitizer` constants that may collide with downstream applications.
 
 ## [1.0.7] - 2026-05-16
 
@@ -144,7 +155,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.7...HEAD
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.8...HEAD
+[1.0.8]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.7...v1.0.8
+[1.0.8t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.8
 [1.0.7]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.6...v1.0.7
 [1.0.7t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.7
 [1.0.6]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.5...v1.0.6
