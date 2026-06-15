@@ -23,6 +23,7 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Changed
 
 - Updated the locked `snaky_hash` runtime dependency to v2.0.5.
+- Raised the `auth-sanitizer` runtime dependency floor to v0.2.1.
 
 ### Deprecated
 
