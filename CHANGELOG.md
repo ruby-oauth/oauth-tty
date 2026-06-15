@@ -25,7 +25,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - Retemplated repository metadata, workflows, modular gemfiles, and documentation
   scaffolding with the current `kettle-jem` template.
 - Updated the locked `snaky_hash` runtime dependency to v2.0.5.
-- Raised the `auth-sanitizer` runtime dependency floor to v0.2.1.
+- Raised the `auth-sanitizer` runtime dependency floor to `>= 0.2.1`, so OAuth
+  TTY consumers get the current inspect redaction behavior and downstream RBS
+  duplicate-declaration fixes.
 
 ### Deprecated
 
