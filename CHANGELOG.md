@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.0.9] - 2026-06-15
+
+- TAG: [v1.0.9][1.0.9t]
+- COVERAGE: 100.00% -- 315/315 lines in 11 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 11 files
+- 15.79% documented
+
+### Changed
+
 - Retemplated repository metadata, workflows, modular gemfiles, and documentation
   scaffolding with the current `kettle-jem` template.
 - Updated the locked `snaky_hash` runtime dependency to v2.0.5.
@@ -29,15 +46,9 @@ Please file a bug if you notice a violation of semantic versioning.
   TTY consumers get hash and nested-attribute inspect redaction fixes plus
   downstream RBS duplicate-declaration fixes.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - Restored `docs/CNAME` so the generated documentation site keeps its custom domain.
-
-### Security
 
 ## [1.0.8] - 2026-05-20
 
@@ -164,7 +175,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.8...HEAD
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.9...HEAD
+[1.0.9]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.8...v1.0.9
+[1.0.9t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.9
 [1.0.8]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.7...v1.0.8
 [1.0.8t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.8
 [1.0.7]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.6...v1.0.7

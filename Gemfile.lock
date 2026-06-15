@@ -1,26 +1,9 @@
 PATH
   remote: .
   specs:
-    oauth-tty (1.0.8)
+    oauth-tty (1.0.9)
       auth-sanitizer (~> 0.2, >= 0.2.1)
       cgi
-      version_gem (~> 1.1, >= 1.1.11)
-
-PATH
-  remote: /home/pboling/src/kettle-rb/ruby-oauth/auth-sanitizer
-  specs:
-    auth-sanitizer (0.2.1)
-      version_gem (~> 1.1, >= 1.1.10)
-
-PATH
-  remote: /home/pboling/src/kettle-rb/ruby-oauth/oauth
-  specs:
-    oauth (1.1.6)
-      auth-sanitizer (~> 0.2, >= 0.2.1)
-      base64 (~> 0.1)
-      cgi
-      oauth-tty (~> 1.0, >= 1.0.8)
-      snaky_hash (~> 2.0, >= 2.0.5)
       version_gem (~> 1.1, >= 1.1.11)
 
 GEM
@@ -38,6 +21,8 @@ GEM
       rubocop (>= 1.0)
       version_gem (~> 1.1, >= 1.1.11)
     ast (2.4.3)
+    auth-sanitizer (0.2.1)
+      version_gem (~> 1.1, >= 1.1.10)
     backports (3.25.3)
     base64 (0.3.0)
     benchmark (0.5.0)
@@ -181,6 +166,13 @@ GEM
     nokogiri (1.19.3-x86_64-linux-musl)
       racc (~> 1.4)
     nomono (1.0.4)
+      version_gem (~> 1.1, >= 1.1.11)
+    oauth (1.1.6)
+      auth-sanitizer (~> 0.2, >= 0.2.1)
+      base64 (~> 0.1)
+      cgi
+      oauth-tty (~> 1.0, >= 1.0.8)
+      snaky_hash (~> 2.0, >= 2.0.5)
       version_gem (~> 1.1, >= 1.1.11)
     openssl (4.0.2)
     ostruct (0.6.3)
@@ -409,7 +401,7 @@ GEM
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
     vcr (6.4.0)
-    version_gem (1.1.11)
+    version_gem (1.1.12)
     webmock (3.26.2)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -454,7 +446,6 @@ DEPENDENCIES
   addressable (>= 2.8, < 3)
   appraisal2 (~> 3.1, >= 3.1.2)
   appraisal2-rubocop (~> 0.2, >= 0.2.1)
-  auth-sanitizer!
   backports (~> 3.25, >= 3.25.1)
   benchmark (~> 0.5, >= 0.5.0)
   bundler-audit (~> 0.9.3)
@@ -472,7 +463,7 @@ DEPENDENCIES
   mocha (~> 3.0)
   mutex_m (~> 0.2)
   nomono (~> 1.0, >= 1.0.4)
-  oauth!
+  oauth
   oauth-tty!
   rack (~> 2.0)
   rack-test (~> 2.0)
@@ -513,11 +504,12 @@ CHECKSUMS
   appraisal2 (3.1.2) sha256=33a1f8c1e2808aa33a24b4c73d1f20c9571b5a34541d66d04d5e744b5906437a
   appraisal2-rubocop (0.2.1) sha256=46020fa515706b96d1e9ed76d43ecca09a5bc37b76b884a980e5282dacbaa87b
   ast (2.4.3) sha256=954615157c1d6a382bc27d690d973195e79db7f55e9765ac7c481c60bdb4d383
-  auth-sanitizer (0.2.1)
+  auth-sanitizer (0.2.1) sha256=917dcf01f7589b06c26726afe90568cf2fb29d37a1f94facfc664f11967cc577
   backports (3.25.3) sha256=94298d32dc3c40ca15633b54e282780b49e2db0c045f602ea1907e4f63a17235
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
+  bundler (4.0.14) sha256=d09a0a965cf772266a7e49e83610be7c2f4e49e61134c42a56804bb383cc24b8
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
   cgi (0.5.1) sha256=e93fcafc69b8a934fe1e6146121fa35430efa8b4a4047c4893764067036f18e9
   cmdparse (3.0.7) sha256=f7c5cace10bec6abf853370ae095e4b97a84ed9d847b3fb38f41cc4fbc950739
@@ -559,7 +551,7 @@ CHECKSUMS
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
   json (2.19.9) sha256=9b9025b7cdddafa38d316eca0b2358488e42d417045c1b90d216a9fefe46b79a
   kettle-dev (2.2.9) sha256=9b3dfb70aeb5b208159a386b2be22912f2da5410907c3facf441f879822682b6
-  kettle-soup-cover (2.0.2)
+  kettle-soup-cover (2.0.2) sha256=e400380e165cc880fb0c83f05b2836d815c414b4c707e9c93d5b91979ab12ab4
   kettle-test (2.0.5) sha256=98fd96f03c4470cd2cb0b1cef339455064d8a68bc180f70864d85fd74f41d978
   kramdown (2.5.2) sha256=1ba542204c66b6f9111ff00dcc26075b95b220b07f2905d8261740c82f7f02fa
   kramdown-parser-gfm (1.1.0) sha256=fb39745516427d2988543bf01fc4cf0ab1149476382393e0e9c48592f6581729
@@ -580,8 +572,8 @@ CHECKSUMS
   nokogiri (1.19.3-x86_64-linux-gnu) sha256=2f5078620fe12e83669b5b17311b32532a8153d02eee7ad06948b926d6080976
   nokogiri (1.19.3-x86_64-linux-musl) sha256=248c906d2166eca5efb56d52fdee5f9a1f51d69a72e2b64fdac647b4ce39ea3f
   nomono (1.0.4) sha256=1ad249afd491e46f0f32264f824d45c26d9030f8977ca13f258651c7e015bcc9
-  oauth (1.1.6)
-  oauth-tty (1.0.8)
+  oauth (1.1.6) sha256=19dd03e308e41f8237842e0c9e574a254e432f2556fd4104c4397a8a0538f180
+  oauth-tty (1.0.9)
   openssl (4.0.2) sha256=1037ad2868ae58df9ad917891c0c0f9815a1172f6846d4bcdd508e4c2ee747c2
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970
@@ -664,7 +656,7 @@ CHECKSUMS
   unicode-display_width (3.2.0) sha256=0cdd96b5681a5949cdbc2c55e7b420facae74c4aaf9a9815eee1087cb1853c42
   unicode-emoji (4.2.0) sha256=519e69150f75652e40bf736106cfbc8f0f73aa3fb6a65afe62fefa7f80b0f80f
   vcr (6.4.0) sha256=077ac92cc16efc5904eb90492a18153b5e6ca5398046d8a249a7c96a9ea24ae6
-  version_gem (1.1.11) sha256=695df6464862b3dc976b4f6e0e089062517c8137ecd31078d8c378347f959c97
+  version_gem (1.1.12) sha256=b78f691677807997e63901e8aba1b96d4ae172ce5570ad9ceb0208eb3a0edb3d
   webmock (3.26.2) sha256=774556f2ea6371846cca68c01769b2eac0d134492d21f6d0ab5dd643965a4c90
   webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
   yaml-converter (0.2.0) sha256=0602148de1664ab701c7938a036987576c55e87fb6d4b3cb0fff19c4f7a91386
@@ -678,4 +670,4 @@ CHECKSUMS
   zlib (3.2.3) sha256=5bd316698b32f31a64ab910a8b6c282442ca1626a81bbd6a1674e8522e319c20
 
 BUNDLED WITH
-  4.0.11
+  4.0.14
