@@ -22,9 +22,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- Updated generated documentation dependency metadata to require
-  `yaml-converter` >= 0.2.1.
-
 ### Deprecated
 
 ### Removed
@@ -48,6 +45,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - Raised the `auth-sanitizer` runtime dependency floor to `>= 0.2.1`, so OAuth
   TTY consumers get hash and nested-attribute inspect redaction fixes plus
   downstream RBS duplicate-declaration fixes.
+
+- Updated generated documentation dependency metadata to require
+  `yaml-converter` >= 0.2.1.
 
 ### Fixed
 
