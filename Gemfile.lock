@@ -3,7 +3,6 @@ PATH
   specs:
     oauth-tty (1.0.9)
       auth-sanitizer (~> 0.2, >= 0.2.1)
-      cgi
       version_gem (~> 1.1, >= 1.1.12)
 
 GEM

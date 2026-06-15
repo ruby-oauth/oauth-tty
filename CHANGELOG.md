@@ -26,6 +26,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Removed
 
+- Removed the external `cgi` runtime dependency so Ruby 2.4 uses its bundled
+  CGI library instead of installable `cgi` gem releases that call
+  `String#delete_prefix`.
+
 ### Fixed
 
 - Restored the Ruby 3.4 appraisal's explicit `oauth` dependency so the CI

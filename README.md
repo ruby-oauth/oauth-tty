@@ -118,6 +118,11 @@ If bundler is not being used to manage dependencies, install the gem by executin
 gem install oauth-tty
 ```
 
+`oauth-tty` uses Ruby's `CGI` library for query parameter encoding and parsing.
+Supported Ruby versions that ship `CGI` do not need an additional dependency.
+Applications running on Ruby versions or distributions that do not provide
+`CGI` should add the `cgi` gem directly.
+
 ## ⚙️ Configuration
 
 The oauth-tty gem is a thin CLI over the oauth gem. You supply your consumer credentials, token credentials (when applicable), a target URI, and optional parameters, and the tool signs requests or helps you complete an OAuth 1.0/1.0a 3-legged flow.

@@ -313,6 +313,11 @@ not practical for the current toolchain.</p>
 <pre class="code language-console"><code class="language-console">gem install oauth-tty
 </code></pre>
 
+<p><code>oauth-tty</code> uses Ruby’s <code>CGI</code> library for query parameter encoding and parsing.<br>
+Supported Ruby versions that ship <code>CGI</code> do not need an additional dependency.<br>
+Applications running on Ruby versions or distributions that do not provide<br>
+<code>CGI</code> should add the <code>cgi</code> gem directly.</p>
+
 <h2 id="️-configuration">⚙️ Configuration</h2>
 
 <p>The oauth-tty gem is a thin CLI over the oauth gem. You supply your consumer credentials, token credentials (when applicable), a target URI, and optional parameters, and the tool signs requests or helps you complete an OAuth 1.0/1.0a 3-legged flow.</p>
@@ -692,7 +697,7 @@ Please consider sponsoring me or the project.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jun 15 02:03:47 2026 by
+  Generated on Mon Jun 15 04:50:57 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>
