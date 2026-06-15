@@ -28,6 +28,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Restored the Ruby 3.4 appraisal's explicit `oauth` dependency so the CI
+  matrix exercises the same runtime dependency pattern as the other Ruby
+  version appraisals.
+
 ### Security
 
 ## [1.0.9] - 2026-06-15

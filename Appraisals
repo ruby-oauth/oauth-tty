@@ -121,6 +121,7 @@ appraise "ruby-3-3" do
 end
 
 appraise "ruby-3-4" do
+  gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
 end
 
