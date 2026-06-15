@@ -26,17 +26,30 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Removed
 
+### Fixed
+
+### Security
+
+## [1.0.10] - 2026-06-15
+
+- TAG: [v1.0.10][1.0.10t]
+- COVERAGE: 100.00% -- 315/315 lines in 11 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 11 files
+- 15.79% documented
+
+### Removed
+
 - Removed the external `cgi` runtime dependency so Ruby 2.4 uses its bundled
   CGI library instead of installable `cgi` gem releases that call
   `String#delete_prefix`.
 
 ### Fixed
 
+- Restore compatibility with Ruby 2.4 by removing the direct runtime dependency
+  on the cgi gem.
 - Restored the Ruby 3.4 appraisal's explicit `oauth` dependency so the CI
   matrix exercises the same runtime dependency pattern as the other Ruby
   version appraisals.
-
-### Security
 
 ## [1.0.9] - 2026-06-15
 
@@ -186,7 +199,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.9...HEAD
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.10...HEAD
+[1.0.10]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.9...v1.0.10
+[1.0.10t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.10
 [1.0.9]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.8...v1.0.9
 [1.0.9t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.9
 [1.0.8]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.7...v1.0.8

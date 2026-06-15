@@ -3,7 +3,7 @@
 module OAuth
   module TTY
     module Version
-      VERSION = "1.0.9"
+      VERSION = "1.0.10"
     end
     VERSION = Version::VERSION # Traditional Constant Location
   end
