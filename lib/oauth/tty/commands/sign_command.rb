@@ -24,14 +24,14 @@ module OAuth
                 authorize_url: options[:authorize_url],
                 request_token_url: options[:request_token_url],
                 scheme: options[:scheme],
-                http_method: options[:method].to_s.downcase.to_sym,
+                http_method: options[:method].to_s.downcase.to_sym
               )
               request_token = consumer.get_request_token({oauth_callback: options[:oauth_callback]}, {})
               # The following calls are intentionally ignored (side-effect only) to satisfy expected interactions
               request_token.callback_confirmed?
               request_token.authorize_url
               request_token.get_access_token(oauth_verifier: nil)
-            rescue StandardError
+            rescue
               # Ignore any errors from the silent auth interactions to avoid affecting signing output
             end
           end
@@ -39,14 +39,14 @@ module OAuth
           request = OAuth::RequestProxy.proxy(
             "method" => options[:method],
             "uri" => options[:uri],
-            "parameters" => parameters,
+            "parameters" => parameters
           )
 
           puts_verbose_parameters(request) if verbose?
 
           request.sign!(
             consumer_secret: options[:oauth_consumer_secret],
-            token_secret: options[:oauth_token_secret],
+            token_secret: options[:oauth_token_secret]
           )
 
           if verbose?

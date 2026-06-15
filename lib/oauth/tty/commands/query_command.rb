@@ -22,7 +22,7 @@ module OAuth
           consumer = OAuth::Consumer.new(
             options[:oauth_consumer_key],
             options[:oauth_consumer_secret],
-            scheme: options[:scheme],
+            scheme: options[:scheme]
           )
 
           access_token = OAuth::AccessToken.new(consumer, options[:oauth_token], options[:oauth_token_secret])

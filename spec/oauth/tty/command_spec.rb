@@ -45,7 +45,7 @@ RSpec.describe OAuth::TTY::Command do
       expect(OAuth::TTY::CLI).to receive(:puts_red).with("Options missing to OAuth CLI: --oauth_consumer_key")
       cmd.run
       stdout.rewind
-      expect(stdout.read).to match(/Usage: oauth <command> \[ARGS\]/)
+      expect(stdout.read).to include("Usage: oauth <command> [ARGS]")
     end
   end
 
@@ -58,7 +58,7 @@ RSpec.describe OAuth::TTY::Command do
         scheme: :header,
         method: :post,
         params: [],
-        version: "1.0",
+        version: "1.0"
       )
       # Non-deterministic values are present but not asserted for exact value
       expect(cmd.send(:options)).to include(:oauth_nonce, :oauth_timestamp)
@@ -113,7 +113,7 @@ RSpec.describe OAuth::TTY::Command do
         oauth_timestamp: "TS",
         realm: "R",
         uri: "http://example.com/",
-        oauth_version: "1.0a",
+        oauth_version: "1.0a"
       )
       expect(cmd.send(:options)[:params]).to eq(["a:1", "raw_pair"])
     end
@@ -141,7 +141,7 @@ RSpec.describe OAuth::TTY::Command do
         authorize_url: "https://example.com/auth",
         oauth_callback: "https://example.com/cb",
         request_token_url: "https://example.com/request",
-        scope: "email",
+        scope: "email"
       )
     end
   end
@@ -169,7 +169,7 @@ RSpec.describe OAuth::TTY::Command do
       expect(params).to include(
         "oauth_consumer_key" => "CK",
         "oauth_token" => "TK",
-        "oauth_signature_method" => "HMAC-SHA1",
+        "oauth_signature_method" => "HMAC-SHA1"
       )
       # timestamp, nonce exist but are not asserted exactly
       expect(params).to include("oauth_timestamp", "oauth_nonce")
@@ -190,6 +190,6 @@ RSpec.describe OAuth::TTY::Command do
 
   it "has no required options by default" do
     command = described_class.new(stdout, stdin, stderr, [])
-    expect(command.required_options).to eq([])
+    expect(command.required_options).to be_empty
   end
 end

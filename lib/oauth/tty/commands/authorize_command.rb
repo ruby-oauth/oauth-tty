@@ -47,7 +47,7 @@ module OAuth
             authorize_url: options[:authorize_url],
             request_token_url: options[:request_token_url],
             scheme: options[:scheme],
-            http_method: options[:method].to_s.downcase.to_sym,
+            http_method: options[:method].to_s.downcase.to_sym
           )
         end
 

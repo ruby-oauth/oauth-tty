@@ -30,7 +30,7 @@ module OAuth
           object_id: object_id,
           stdout: @stdout.inspect,
           stdin: @stdin.inspect,
-          stderr: @stderr.inspect,
+          stderr: @stderr.inspect
         )
       end
 
@@ -96,7 +96,7 @@ module OAuth
             "oauth_timestamp" => options[:oauth_timestamp],
             "oauth_token" => options[:oauth_token],
             "oauth_signature_method" => options[:oauth_signature_method],
-            "oauth_version" => options[:oauth_version],
+            "oauth_version" => options[:oauth_version]
           }.reject { |_k, v| v.nil? || v == "" }.merge(cli_params)
         end
       end

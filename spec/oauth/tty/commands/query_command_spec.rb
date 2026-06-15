@@ -47,7 +47,7 @@ RSpec.describe OAuth::TTY::Commands::QueryCommand, :check_output do
       "--parameters",
       "foo:bar",
       "--parameters",
-      "status=active",
+      "status=active"
     ]
 
     expected_url = "#{uri}?oauth_consumer_key=ck_123&oauth_nonce=abc123&oauth_timestamp=1699999999&oauth_token=at_789&oauth_signature_method=HMAC-SHA1&oauth_version=1.0&foo=bar&status=active"

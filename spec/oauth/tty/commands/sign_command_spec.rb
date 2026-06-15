@@ -27,7 +27,7 @@ RSpec.describe OAuth::TTY::Commands::SignCommand, :check_output do
       "--token",
       "at_789",
       "--secret",
-      "ats_abc",
+      "ats_abc"
     ])
 
     inspected = command.inspect
@@ -93,7 +93,7 @@ RSpec.describe OAuth::TTY::Commands::SignCommand, :check_output do
       "--parameters",
       "status=active",
       "--header",
-      "--verbose",
+      "--verbose"
     ]
 
     out = run_cli("sign", args)
@@ -126,7 +126,7 @@ RSpec.describe OAuth::TTY::Commands::SignCommand, :check_output do
       "--parameters",
       "foo:bar",
       "--verbose",
-      "--xmpp",
+      "--xmpp"
     ]
 
     out = run_cli("sign", args)

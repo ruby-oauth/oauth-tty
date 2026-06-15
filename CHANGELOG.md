@@ -22,6 +22,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Retemplated repository metadata, workflows, modular gemfiles, and documentation
+  scaffolding with the current `kettle-jem` template.
 - Updated the locked `snaky_hash` runtime dependency to v2.0.5.
 - Raised the `auth-sanitizer` runtime dependency floor to v0.2.1.
 
@@ -32,6 +34,7 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 - Restored `docs/CNAME` so the generated documentation site keeps its custom domain.
+
 ### Security
 
 ## [1.0.8] - 2026-05-20
