@@ -106,7 +106,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
-  spec.add_dependency("auth-sanitizer", "~> 0.2", ">= 0.2.1")           # ruby >= 2.2.0
+  spec.add_dependency("anonymous_loader", "~> 0.1", ">= 0.1.0")          # ruby >= 2.2.0
+  spec.add_dependency("auth-sanitizer", "~> 0.2", ">= 0.2.2")           # ruby >= 2.2.0
   spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.12")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
