@@ -22,11 +22,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- Raised the `anonymous_loader` runtime dependency floor to `>= 0.1.1`.
-- Raised the `auth-sanitizer` runtime dependency floor to `>= 0.2.2` and
-  switched isolated sanitizer loading to the released `anonymous_loader` gem,
-  including local workspace wiring for the new runtime dependency.
-
 ### Deprecated
 
 ### Removed
@@ -34,6 +29,20 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [1.0.11] - 2026-06-18
+
+- TAG: [v1.0.11][1.0.11t]
+- COVERAGE: 100.00% -- 311/311 lines in 11 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 11 files
+- 15.79% documented
+
+### Changed
+
+- Raised the `anonymous_loader` runtime dependency floor to `>= 0.1.1`.
+- Raised the `auth-sanitizer` runtime dependency floor to `>= 0.2.2` and
+  switched isolated sanitizer loading to the released `anonymous_loader` gem,
+  including local workspace wiring for the new runtime dependency.
 
 ## [1.0.10] - 2026-06-15
 
@@ -204,7 +213,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.10...HEAD
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.11...HEAD
+[1.0.11]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.10...v1.0.11
+[1.0.11t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.11
 [1.0.10]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.9...v1.0.10
 [1.0.10t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.10
 [1.0.9]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.8...v1.0.9
