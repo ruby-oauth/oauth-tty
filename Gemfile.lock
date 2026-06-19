@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    oauth-tty (1.0.11)
+    oauth-tty (1.0.12)
       anonymous_loader (~> 0.1, >= 0.1.1)
       auth-sanitizer (~> 0.2, >= 0.2.2)
       version_gem (~> 1.1, >= 1.1.12)
@@ -570,7 +570,7 @@ CHECKSUMS
   nokogiri (1.19.4-x86_64-linux-musl) sha256=17dfb7c1fa194ae02fbf7c51a7afc8d278045ab3fdacfd86f91d02d7b274470b
   nomono (1.0.4) sha256=1ad249afd491e46f0f32264f824d45c26d9030f8977ca13f258651c7e015bcc9
   oauth (1.1.7) sha256=a8cd8a96b8b90d738714da628b5f4a36565e278d1d28d82def3b3664bd71f069
-  oauth-tty (1.0.11)
+  oauth-tty (1.0.12)
   openssl (4.0.2) sha256=1037ad2868ae58df9ad917891c0c0f9815a1172f6846d4bcdd508e4c2ee747c2
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970

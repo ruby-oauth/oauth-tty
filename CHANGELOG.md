@@ -30,6 +30,13 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Security
 
+## [1.0.12] - 2026-06-18
+
+- TAG: [v1.0.12][1.0.12t]
+- COVERAGE: 100.00% -- 311/311 lines in 11 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 11 files
+- 15.79% documented
+
 ## [1.0.11] - 2026-06-18
 
 - TAG: [v1.0.11][1.0.11t]
@@ -213,7 +220,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.11...HEAD
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.12...HEAD
+[1.0.12]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.11...v1.0.12
+[1.0.12t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.12
 [1.0.11]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.10...v1.0.11
 [1.0.11t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.11
 [1.0.10]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.9...v1.0.10
