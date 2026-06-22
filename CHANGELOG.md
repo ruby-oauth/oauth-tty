@@ -24,6 +24,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- Raised the `anonymous_loader` runtime dependency floor to `>= 0.1.2`.
 - Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
 
 ### Deprecated
