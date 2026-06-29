@@ -54,5 +54,14 @@
         90
       ]
     }
+  ],
+  "prefix: \"RUBY_OAUTH\",\npath_env: \"RUBY_OAUTH_DEV\",": [
+    {
+      "file": "Gemfile",
+      "lines": [
+        64,
+        96
+      ]
+    }
   ]
 }
