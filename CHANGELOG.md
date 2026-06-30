@@ -35,6 +35,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Corrected RubyGems homepage metadata to point at the gem documentation site.
 
+- Package configured license files in gem release file lists.
+
 ### Security
 
 ## [1.0.12] - 2026-06-18
