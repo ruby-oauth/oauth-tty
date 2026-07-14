@@ -111,7 +111,7 @@ Gem::Specification.new do |spec|
   # Utilities
   spec.add_dependency("anonymous_loader", "~> 0.1", ">= 0.1.2")          # ruby >= 2.2.0
   spec.add_dependency("auth-sanitizer", "~> 0.2", ">= 0.2.2")           # ruby >= 2.2.0
-  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.13")              # ruby >= 2.2.0
+  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.14")     # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
   #       visibility and discoverability.
