@@ -425,6 +425,8 @@ files:
       strategy: accept_template
   gemfiles:
     modular:
+      optional.gemfile:
+        strategy: keep_destination
       templating.gemfile:
         strategy: accept_template
       templating_local.gemfile:
