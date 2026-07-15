@@ -18,11 +18,6 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from oauth-tty.gemspec
 gemspec
 
-# The runtime dependency is intentionally not declared in the gemspec because
-# oauth currently depends on oauth-tty. Development and locked-deps runs still
-# need oauth available for the CLI and specs.
-gem "oauth", ">= 1.1.0"
-
 # Local workspace dependency wiring for *_local.gemfile overrides
 nomono_requirements = ["~> 1.0", ">= 1.0.8"]
 gem "nomono", *nomono_requirements, require: false # ruby >= 2.2
