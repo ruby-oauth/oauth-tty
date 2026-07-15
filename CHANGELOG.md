@@ -20,12 +20,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
-- Added support for JRuby 10.1 and TruffleRuby 34.0.
-
 ### Changed
-
-- Raised the `anonymous_loader` runtime dependency floor to `>= 0.1.2`.
-- Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
 
 ### Deprecated
 
@@ -33,11 +28,29 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [1.0.13] - 2026-07-15
+
+- TAG: [v1.0.13][1.0.13t]
+- COVERAGE: 99.68% -- 311/312 lines in 12 files
+- BRANCH COVERAGE: 96.55% -- 28/29 branches in 12 files
+- 15.79% documented
+
+### Added
+
+- Added support for JRuby 10.1 and TruffleRuby 34.0.
+
+### Changed
+
+- Raised the `anonymous_loader` runtime dependency floor to `>= 0.1.2`.
+- Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
+
+### Fixed
+
 - Corrected RubyGems homepage metadata to point at the gem documentation site.
 
 - Package configured license files in gem release file lists.
-
-### Security
 
 ## [1.0.12] - 2026-06-18
 
@@ -229,7 +242,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release (@pboling)
 
-[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.12...HEAD
+[Unreleased]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.13...HEAD
+[1.0.13]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.12...v1.0.13
+[1.0.13t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.13
 [1.0.12]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.11...v1.0.12
 [1.0.12t]: https://github.com/ruby-oauth/oauth-tty/releases/tag/v1.0.12
 [1.0.11]: https://github.com/ruby-oauth/oauth-tty/compare/v1.0.10...v1.0.11
