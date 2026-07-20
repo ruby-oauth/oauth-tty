@@ -11,5 +11,10 @@ module OAuth
 
       attr_reader options: untyped
     end
+
+    module Version
+      VERSION: String
+    end
+    VERSION: String
   end
 end
