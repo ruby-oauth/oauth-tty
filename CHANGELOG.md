@@ -22,6 +22,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+- The `oauth` executable now supports `-v` / `--version` and prints a standard
+  startup header on normal runs.
 - kettle-jem-template-20260716-001 - Shim gemspec manifests now include
   `LICENSE.md` instead of nonexistent `LICENSE.txt`.
 - kettle-jem-template-20260716-002 - Generated gemspec manifests now ship fewer

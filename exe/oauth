@@ -1,14 +1,23 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "oauth"
-require "oauth_tty"
+require_relative "../lib/oauth/tty/version"
 
 # don't dump a backtrace on a ^C
 Signal.trap("INT") do
   puts
   exit(1)
 end
+script_basename = File.basename(__FILE__)
+if ARGV.any? { |arg| arg == "-v" || arg == "--version" }
+  puts OAuth::TTY::Version::VERSION
+  exit(0)
+end
+
+require "oauth"
+require "oauth_tty"
+
+puts "== #{script_basename} v#{OAuth::TTY::Version::VERSION} =="
 ARGV << "help" if ARGV.empty?
 command = ARGV.shift
 
