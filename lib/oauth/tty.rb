@@ -13,8 +13,8 @@ require "version_gem"
 require "oauth"
 
 # this gem's version
-require_relative "tty/version"
 require_relative "tty/auth_sanitizer"
+require_relative "tty/version"
 
 # Configure version before loading the rest of the library
 OAuth::TTY::Version.class_eval do
