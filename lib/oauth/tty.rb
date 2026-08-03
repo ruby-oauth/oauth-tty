@@ -14,12 +14,8 @@ require "oauth"
 
 # this gem's version
 require_relative "tty/auth_sanitizer"
-require_relative "tty/version"
 
 # Configure version before loading the rest of the library
-OAuth::TTY::Version.class_eval do
-  extend VersionGem::Basic
-end
 
 # this gem
 require_relative "tty/cli"
@@ -29,9 +25,14 @@ require_relative "tty/commands/query_command"
 require_relative "tty/commands/authorize_command"
 require_relative "tty/commands/sign_command"
 require_relative "tty/commands/version_command"
+require_relative "tty/version"
 
 module OAuth
   # The namespace of this gem
   module TTY
   end
+end
+
+OAuth::TTY::Version.class_eval do
+  extend VersionGem::Basic
 end
