@@ -1,6 +1,7 @@
 # rubocop:disable RSpec/SpecFilePathFormat
 
 require "anonymous_loader"
+require "oauth/tty"
 RSpec.describe OAuth::TTY::Version do
   it_behaves_like "a Version module", described_class
 
