@@ -1,10 +1,51 @@
 {
+  "- gem: bundler-audit\ndirect: oauth-tty.gemspec": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        103,
+        108
+      ]
+    }
+  ],
   "// Use 'forwardPorts' to make a list of ports inside the container available locally.\n// \"forwardPorts\": [],": [
     {
       "file": ".devcontainer/devcontainer.json",
       "lines": [
         11,
         22
+      ]
+    }
+  ],
+  "action: remove_modular_gem\nreason: \"oauth-tty.gemspec owns this development dependency.\"": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        101,
+        106,
+        116,
+        121,
+        126,
+        131,
+        136,
+        141,
+        146
+      ]
+    }
+  ],
+  "direct: oauth-tty.gemspec\nmodular: gemfiles/modular/injected.gemfile": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        99,
+        109,
+        114,
+        119,
+        124,
+        129,
+        134,
+        139,
+        144
       ]
     }
   ],
@@ -15,6 +56,31 @@
         73,
         79,
         85
+      ]
+    }
+  ],
+  "modular: gemfiles/modular/injected.gemfile\naction: remove_modular_gem": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        100,
+        110,
+        115,
+        120,
+        125,
+        130,
+        135,
+        140,
+        145
+      ]
+    }
+  ],
+  "reason: \"oauth-tty.gemspec owns this development dependency.\"\n- gem: bundler-audit": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        102,
+        107
       ]
     }
   ]
