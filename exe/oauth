@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative "../lib/oauth/tty/version"
+require "oauth/tty/version"
 
 # don't dump a backtrace on a ^C
 Signal.trap("INT") do

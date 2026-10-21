@@ -3,8 +3,17 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        105,
-        110
+        118,
+        123
+      ]
+    }
+  ],
+  "- ruby: \"ruby\"\nappraisal: \"current\"": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        41,
+        47
       ]
     }
   ],
@@ -21,15 +30,24 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        103,
-        108,
-        118,
-        123,
-        128,
-        133,
-        138,
-        143,
-        148
+        116,
+        121,
+        131,
+        136,
+        141,
+        146,
+        151,
+        156,
+        161
+      ]
+    }
+  ],
+  "config: .licenserc.yaml\nmode: \"check\"": [
+    {
+      "file": ".github/workflows/license-eye.yml",
+      "lines": [
+        49,
+        62
       ]
     }
   ],
@@ -37,15 +55,24 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        101,
-        111,
-        116,
-        121,
-        126,
-        131,
-        136,
-        141,
-        146
+        114,
+        124,
+        129,
+        134,
+        139,
+        144,
+        149,
+        154,
+        159
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\nrubygems: latest": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        44,
+        50
       ]
     }
   ],
@@ -53,9 +80,9 @@
     {
       "file": "Appraisals",
       "lines": [
-        73,
-        79,
-        85
+        77,
+        83,
+        89
       ]
     }
   ],
@@ -63,15 +90,15 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        102,
-        112,
-        117,
-        122,
-        127,
-        132,
-        137,
-        142,
-        147
+        115,
+        125,
+        130,
+        135,
+        140,
+        145,
+        150,
+        155,
+        160
       ]
     }
   ],
@@ -79,8 +106,8 @@
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
-        104,
-        109
+        117,
+        122
       ]
     }
   ]

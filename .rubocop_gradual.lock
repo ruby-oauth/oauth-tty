@@ -1,5 +1,5 @@
 {
-  "gemfiles/modular/templating.gemfile:3018447732": [
-    [14, 3, 47, "Bundler/DuplicatedGem: Gem `tree_sitter_language_pack` requirements already given on line 10 of the Gemfile.", 3843603197]
+  "gemfiles/modular/style_local.gemfile:803618203": [
+    [71, 23, 20, "Style/SafeNavigation: Use safe navigation (`&.`) instead of checking if an object exists before calling the method.", 1851388465]
   ]
 }
