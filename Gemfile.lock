@@ -25,7 +25,7 @@ PATH
   remote: /var/home/pboling/src/my/ruby-oauth/auth-sanitizer
   specs:
     auth-sanitizer (0.2.4)
-      version_gem (~> 1.1, >= 1.1.15)
+      version_gem (~> 1.1, >= 1.1.16)
 
 PATH
   remote: /var/home/pboling/src/my/ruby-oauth/version_gem
@@ -316,7 +316,7 @@ GEM
     openssl (4.0.2)
     ostruct (0.6.3)
     parallel (1.28.0)
-    parser (3.3.12.0)
+    parser (3.3.13.0)
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
@@ -513,9 +513,9 @@ GEM
       simplecov (>= 0.4.1)
     simplecov_lcov_formatter (0.9.0)
       simplecov (>= 0.18)
-    snaky_hash (2.0.7)
+    snaky_hash (2.0.8)
       hashie (>= 0.1.0, < 6)
-      version_gem (~> 1.1, >= 1.1.14)
+      version_gem (~> 1.1, >= 1.1.16)
     sorbet-runtime (0.6.13591)
     standard (1.57.0)
       language_server-protocol (~> 3.17.0.2)
@@ -786,7 +786,7 @@ CHECKSUMS
   openssl (4.0.2) sha256=1037ad2868ae58df9ad917891c0c0f9815a1172f6846d4bcdd508e4c2ee747c2
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970
-  parser (3.3.12.0) sha256=21a6d7f755d5a24dfbdc6e6b772e4e879a52e7631a88bc5a3a134606052c9828
+  parser (3.3.13.0) sha256=e02f9b63c2fe05b0c68f692ba4df89b3cb113b663964f75d988fbebfd6c3deca
   parslet (2.0.0) sha256=d45130695d39b43d7e6a91f4d2ec66b388a8d822bae38de9b4de9a5fbde1f606
   plain-merge (7.1.16) sha256=26ba05409259dd05763d375886e4015b79fd06e9855e52e113b13e91c6d97b1a
   pp (0.6.4) sha256=dfcb0fce700c41456265922884f9fe195d7fbb0674a3578e6c0f69588e82b570
@@ -852,7 +852,7 @@ CHECKSUMS
   simplecov-console (0.9.5) sha256=b1108bcfff5f210143e2b8301698c367b01586f20d25a73e95475a5df6fc6ff6
   simplecov-rcov (0.3.7) sha256=372f50bf6df6b6350b7d0c840f2f8bdabe021861a43c26877b747c9ac96139fc
   simplecov_lcov_formatter (0.9.0) sha256=4c1839bb31dcf7a8f7a6474c94ed228aa03b994e9dd5e1965e58b4121b049bed
-  snaky_hash (2.0.7) sha256=7d02c70012a3f932e48860cd024577908300c9aa615e0cb9b450aaa749cbcb4d
+  snaky_hash (2.0.8) sha256=309f8b9874d00e72c415747d90ab746f2718b19157da48788c798de3eb3bc2a2
   sorbet-runtime (0.6.13591) sha256=ef9d316efe9e63fd149b83c86d647891298124ff54c5783494c5990dde5445a6
   standard (1.57.0) sha256=4a65ea92421fbaf77fb54da91e16093cf79b335b8f62c35aaa3dd714c8592858
   standard-custom (1.0.2) sha256=424adc84179a074f1a2a309bb9cf7cd6bfdb2b6541f20c6bf9436c0ba22a652b
