@@ -15,28 +15,13 @@ PATH
       auth-sanitizer (~> 0.2, >= 0.2.4)
       version_gem (~> 1.1, >= 1.1.16)
 
-PATH
-  remote: /var/home/pboling/src/my/ruby-oauth/anonymous_loader
-  specs:
-    anonymous_loader (0.1.4)
-      version_gem (~> 1.1, >= 1.1.15)
-
-PATH
-  remote: /var/home/pboling/src/my/ruby-oauth/auth-sanitizer
-  specs:
-    auth-sanitizer (0.2.4)
-      version_gem (~> 1.1, >= 1.1.16)
-
-PATH
-  remote: /var/home/pboling/src/my/ruby-oauth/version_gem
-  specs:
-    version_gem (1.1.16)
-
 GEM
   remote: https://gem.coop/
   specs:
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
+    anonymous_loader (0.1.4)
+      version_gem (~> 1.1, >= 1.1.15)
     ansi (1.6.0)
     appraisal2 (3.2.6)
       bundler (>= 1.17.3)
@@ -74,6 +59,8 @@ GEM
       ast-merge (= 7.1.16)
       token-resolver (~> 2.0, >= 2.0.10)
       version_gem (~> 1.1, >= 1.1.15)
+    auth-sanitizer (0.2.4)
+      version_gem (~> 1.1, >= 1.1.16)
     backports (3.25.3)
     base64 (0.3.0)
     bash-merge (7.1.16)
@@ -587,6 +574,7 @@ GEM
       ethon (>= 0.18.0)
     unicode-display_width (2.6.0)
     vcr (6.4.0)
+    version_gem (1.1.16)
     webmock (3.34.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -630,10 +618,8 @@ PLATFORMS
 
 DEPENDENCIES
   addressable (>= 2.8, < 3)
-  anonymous_loader (~> 0.1, >= 0.1.3)!
   appraisal2 (~> 3.2, >= 3.2.6)
   appraisal2-rubocop (~> 1.0, >= 1.0.5)
-  auth-sanitizer (~> 0.2, >= 0.2.3)!
   backports (~> 3.25, >= 3.25.1)
   benchmark (~> 0.5, >= 0.5.0)
   bundler-audit (~> 0.9.3)
@@ -678,7 +664,6 @@ DEPENDENCIES
   turbo_tests2 (~> 4.0, >= 4.0.0)
   typhoeus (>= 0.1.13)
   vcr (>= 4)
-  version_gem (~> 1.1, >= 1.1.15)!
   webmock (>= 3)
   webrick (~> 1.9)
   yaml-converter (~> 0.2, >= 0.2.7)
@@ -692,7 +677,7 @@ DEPENDENCIES
 
 CHECKSUMS
   addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
-  anonymous_loader (0.1.4)
+  anonymous_loader (0.1.4) sha256=ebccdc13b23ccbe24c616e7bef8f4c5d4d09622097781107bfbdbb4c5ae0504b
   ansi (1.6.0) sha256=ac9ea0c0ea8d32fb4e271348e609963ac78882f34b73836c2a02b3622e666658
   appraisal2 (3.2.6) sha256=6664d2404b9fe160dfbbed4dd9b78e7b9146402bc3468ff92ba78c1878bc318a
   appraisal2-rubocop (1.0.5) sha256=91db38e8585dc2b07491eee6c288764511a6c6a0a5d06c339c91ab6a4164bea8
@@ -703,7 +688,7 @@ CHECKSUMS
   ast-crispr-toml (7.1.16) sha256=057cd645807619cb7dbe60d84725889dcdecc0437e941b1f0bdfbe880f53f5d4
   ast-merge (7.1.16) sha256=3973f1f7efd5979bccc6bade5cb4da92c88a8ac78a951c18b1e9bc5ac212eeee
   ast-template (7.1.16) sha256=24cca8f82b4ddd69be1cdd1714b9241951bc597eb1667a84d6cba272c2905828
-  auth-sanitizer (0.2.4)
+  auth-sanitizer (0.2.4) sha256=12413515e0c5bfe9809d0ea103f3bc6d066750aa0b843cc12b704c3f8fe94ef0
   backports (3.25.3) sha256=94298d32dc3c40ca15633b54e282780b49e2db0c045f602ea1907e4f63a17235
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
   bash-merge (7.1.16) sha256=23fbb68d954a55b645b14e97aa2c12fef89a8db1defb4409284c3bf0f2e00883
@@ -880,7 +865,7 @@ CHECKSUMS
   typhoeus (1.6.0) sha256=bacc41c23e379547e29801dc235cd1699b70b955a1ba3d32b2b877aa844c331d
   unicode-display_width (2.6.0) sha256=12279874bba6d5e4d2728cef814b19197dbb10d7a7837a869bab65da943b7f5a
   vcr (6.4.0) sha256=077ac92cc16efc5904eb90492a18153b5e6ca5398046d8a249a7c96a9ea24ae6
-  version_gem (1.1.16)
+  version_gem (1.1.16) sha256=8cdfb3d7d47419a434935f60c9d7090558cf6baffe277d41ca6e2e49fa7c22c7
   webmock (3.34.0) sha256=72eed29dc8c00148d592acaedaaa6b869e2e397de57dfc8602b84aa834f46b33
   webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
   yaml-converter (0.2.7) sha256=aa6cae4a9f41ab909c39e4185911c7c3b0a196ae33439ec721aa17631e6d1b3d

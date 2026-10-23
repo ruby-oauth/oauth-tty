@@ -109,9 +109,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
-  spec.add_dependency("anonymous_loader", "~> 0.1", ">= 0.1.3")          # ruby >= 2.2.0
-  spec.add_dependency("auth-sanitizer", "~> 0.2", ">= 0.2.3")           # ruby >= 2.2.0
-  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.15")              # ruby >= 2.2.0
+  spec.add_dependency("anonymous_loader", "~> 0.1", ">= 0.1.4")          # ruby >= 2.2.0
+  spec.add_dependency("auth-sanitizer", "~> 0.2", ">= 0.2.4")           # ruby >= 2.2.0
+  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.16")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
   #       visibility and discoverability.
@@ -127,7 +127,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 3.1", ">= 3.1.22")             # ruby >= 2.4
+  spec.add_development_dependency("kettle-dev", "~> 3.1", ">= 3.1.24")             # ruby >= 2.4
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
