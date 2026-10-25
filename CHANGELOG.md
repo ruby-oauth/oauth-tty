@@ -35,6 +35,9 @@ Please file a bug if you notice a violation of semantic versioning.
   `jruby`). Review each entry and pick a resolution per the project's own
   engine support needs.
 
+- kettle-jem-template-20260720-001 - READMEs can now display configured
+  corporate sponsor logos.
+
 ### Changed
 
 - The `oauth` executable now supports `-v` / `--version` and prints a standard
@@ -54,9 +57,9 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
-- [kc] kettle-jem/prepare: updated 17 project files:
+- [kc] kettle-jem/prepare: updated 24 project files:
   - configuration (1)
-  - dependencies (16)
+  - dependencies (23)
 
 - [kc] kettle-jem/template: updated 51 project files:
   - code and tests (3)
