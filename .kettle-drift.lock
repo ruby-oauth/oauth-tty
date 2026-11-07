@@ -102,12 +102,30 @@
       ]
     }
   ],
+  "out != \"\" { print > out }\n' \"$bundle\"": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        95,
+        124
+      ]
+    }
+  ],
   "reason: \"oauth-tty.gemspec owns this development dependency.\"\n- gem: bundler-audit": [
     {
       "file": ".structuredmerge/kettle-jem.yml",
       "lines": [
         117,
         122
+      ]
+    }
+  ],
+  "subject=\"$(openssl x509 -in \"$file\" -noout -subject 2>/dev/null || true)\"\nif [ -n \"$subject\" ] && matches \"$subject\"; then": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        103,
+        127
       ]
     }
   ]
