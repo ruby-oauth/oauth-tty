@@ -61,11 +61,13 @@ end
 appraise "head" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "modular/rspec.gemfile"
 end
 
 appraise "current" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   eval_gemfile "modular/x_std_libs.gemfile"
+  eval_gemfile "modular/rspec.gemfile"
 end
 
 appraise "dep-heads" do
@@ -77,23 +79,27 @@ appraise "ruby-2-4" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   # gem "oauth", ">= 1.1.0"
   eval_gemfile "modular/x_std_libs/r2.4/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
 end
 
 appraise "ruby-2-5" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   # gem "oauth", ">= 1.1.0"
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
 end
 
 appraise "ruby-2-6" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   # gem "oauth", ">= 1.1.0"
   eval_gemfile "modular/x_std_libs/r2.6/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
 end
 
 appraise "ruby-2-7" do
   gem "oauth", ">= 1.1.0"
   eval_gemfile "modular/x_std_libs/r2/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r2/v0.6.gemfile"
 end
 
 appraise "ruby-3-0" do
@@ -101,27 +107,32 @@ appraise "ruby-3-0" do
   eval_gemfile "modular/json/truffleruby_23_0.gemfile"
   gem "oauth", ">= 1.1.0"
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3.2/v0.6.gemfile"
 end
 
 appraise "ruby-3-1" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   eval_gemfile "modular/x_std_libs/r3.1/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3.2/v0.6.gemfile"
 end
 
 appraise "ruby-3-2" do
   eval_gemfile "modular/json/truffleruby_23_1.gemfile"
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3.2/v0.6.gemfile"
 end
 
 appraise "ruby-3-3" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3/v0.8.gemfile"
 end
 
 appraise "ruby-3-4" do
   gem "oauth", github: "ruby-oauth/oauth", branch: "main"
   eval_gemfile "modular/x_std_libs/r3/libs.gemfile"
+  eval_gemfile "modular/rspec_junit_formatter/r3/v0.8.gemfile"
 end
 
 appraise "audit" do

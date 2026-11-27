@@ -57,16 +57,16 @@ Please file a bug if you notice a violation of semantic versioning.
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
 
-- [kc] kettle-jem/prepare: updated 25 project files:
+- [kc] kettle-jem/prepare: updated 31 project files since the last release:
   - configuration (2)
-  - dependencies (23)
+  - dependencies (29)
 
-- [kc] kettle-jem/template: updated 51 project files:
-  - code and tests (3)
+- [kc] kettle-jem/template: updated 65 project files since the last release:
+  - code and tests (4)
   - configuration (1)
-  - dependencies (8)
+  - dependencies (19)
   - documentation (2)
-  - other (5)
+  - other (7)
   - workflows (32)
 
 - Dependency floors raised to the latest releases, including auth-sanitizer >= 0.2.4 (Hash#inspect redaction in debug logging, GHSA-cmh8-5q25-68v6).
